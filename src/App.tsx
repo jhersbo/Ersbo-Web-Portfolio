@@ -1,13 +1,15 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
-
 import HeroNav from './components/HeroNav';
 import LandingScreen from './components/LandingScreen';
+import About from './components/About';
 
 import { ReactNode } from 'react';
 import React from 'react';
 
-class App extends React.Component<{}, { page: string }>{
+interface IMyProps{
+  page: string
+}
+class App extends React.Component<{}, IMyProps>{
   constructor(props: any){
     super(props);
     this.state = {
@@ -21,12 +23,11 @@ class App extends React.Component<{}, { page: string }>{
   render(): ReactNode {
     if(this.state.page === 'landing'){
       return(
-        <LandingScreen/>
+          <LandingScreen viewChange={this.setView}/>
       )
     }else{
       return(
         <HeroNav/>
-        //other stuff
       )
     }
   }
