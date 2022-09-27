@@ -2,10 +2,12 @@ import './sass/styles.scss'
 import HeroNav from './components/HeroNav';
 import LandingScreen from './components/LandingScreen';
 import About from './components/About';
+import Cookies from 'cookies-js';
 
 import { ReactNode } from 'react';
 import React from 'react';
 
+let cookiePage:string = Cookies.get('page')
 interface IMyProps{
   page: string
 }
@@ -13,7 +15,7 @@ class App extends React.Component<{}, IMyProps>{
   constructor(props: any){
     super(props);
     this.state = {
-      page: 'landing',
+      page: cookiePage? cookiePage: 'landing',
     }
     this.setView = this.setView.bind(this)
   }
@@ -31,6 +33,7 @@ class App extends React.Component<{}, IMyProps>{
       return(
         <div className='app'>
           <HeroNav/>
+          <About/>
         </div>
       )
     }

@@ -14,7 +14,8 @@ class LandingScreen extends React.Component<any>{
                     </div>
                 </header>
                 <footer id="landing-footer" className="bottom-landing-panel">
-                    <h3 id="landing-click-prompt">*Click anywhere to continue.*</h3>
+                    <h2>Thank you for checking out my site!</h2>
+                    <h4 id="landing-click-prompt">*Click anywhere to continue.*</h4>
                 </footer>
             </div>
         )

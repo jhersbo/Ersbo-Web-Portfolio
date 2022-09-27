@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`passes snapshot test 1`] = `
+<div
+  onClick={[Function]}
+>
+  <header
+    id="top-landing-panels"
+  >
+    <div
+      className="top-landing-panels"
+      id="landing-name-div"
+    >
+      <h1
+        id="landing-name"
+      >
+        Jack Ersbo
+      </h1>
+    </div>
+    <div
+      className="top-landing-panels"
+      id="landing-role-div"
+    >
+      <h1
+        id="landing-role"
+      >
+        Full-Stack Software Developer
+      </h1>
+    </div>
+  </header>
+  <footer
+    className="bottom-landing-panel"
+    id="landing-footer"
+  >
+    <h2>
+      Thank you for checking out my site!
+    </h2>
+    <h4
+      id="landing-click-prompt"
+    >
+      *Click anywhere to continue.*
+    </h4>
+  </footer>
+</div>
+`;
