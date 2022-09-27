@@ -1,4 +1,4 @@
-import './App.css';
+import './sass/styles.scss'
 import HeroNav from './components/HeroNav';
 import LandingScreen from './components/LandingScreen';
 import About from './components/About';
@@ -23,11 +23,15 @@ class App extends React.Component<{}, IMyProps>{
   render(): ReactNode {
     if(this.state.page === 'landing'){
       return(
+        <div className='app'>
           <LandingScreen viewChange={this.setView}/>
+        </div>
       )
     }else{
       return(
-        <HeroNav/>
+        <div className='app'>
+          <HeroNav/>
+        </div>
       )
     }
   }

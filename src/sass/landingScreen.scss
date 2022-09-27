@@ -1,0 +1,29 @@
+#top-landing-panels{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-height: 75vh;
+}
+
+#landing-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 25vh;
+}
+
+.top-landing-panels{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+
+#landing-name-div{
+    min-width: 33vw;
+}
+
+#landing-role-div{
+    min-width: 66vw;
+}
