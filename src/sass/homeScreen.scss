@@ -3,4 +3,9 @@
     height: 150px;
     border-radius: 50%;
     background: var(--accent);
-  }
+}
+
+#container{
+  display: flex;
+  justify-content: space-around;
+}

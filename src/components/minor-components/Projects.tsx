@@ -3,7 +3,7 @@ import { useFollowPointer } from "../Function_Modules/useFollowPointer";
 
 import { useEffect, useRef, useState } from "react";
 
-const About = ()=>{
+const Projects = ()=>{
     const ref = useRef(null);
     const { x, y } = useFollowPointer(ref);
     const previous = useRef({x, y})
@@ -40,10 +40,10 @@ const About = ()=>{
             stiffness: 40,
             restDelta: 0.001
         }}>
-            <h1>About Me</h1>
+            <h1>My Projects</h1>
             <button>Yo</button>
         </motion.div>
     )
 }
 
-export default About
+export default Projects
