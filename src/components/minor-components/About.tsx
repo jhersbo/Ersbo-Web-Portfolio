@@ -19,6 +19,7 @@ const About = ()=>{
         ref={ref}
         className="box"
         animate={clicked ? coords : previousRef.current}
+        whileHover={{scale: 1.1,}}
         transition={{
             type: "spring",
             damping: 10,

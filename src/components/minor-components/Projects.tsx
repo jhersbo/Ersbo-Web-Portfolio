@@ -19,10 +19,11 @@ const Projects = ()=>{
         ref={ref}
         className="box"
         animate={clicked ? coords : previousRef.current}
+        whileHover={{scale: 1.1,}}
         transition={{
             type: "spring",
             damping: 10,
-            stiffness: 40,
+            stiffness: 50,
             restDelta: 0.001
         }}>
             <h3 onClick={()=>{handleClick()}}>My Projects</h3>
