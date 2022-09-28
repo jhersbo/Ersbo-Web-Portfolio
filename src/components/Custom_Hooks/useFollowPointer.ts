@@ -1,12 +1,11 @@
 import { useState, RefObject, useEffect, useRef } from "react";
 
-export function useFollowPointer(ref: RefObject<HTMLElement>, clicked:boolean) {
+export function useFollowPointer(ref: RefObject<HTMLElement>) {
   let prevPointRef: React.MutableRefObject<{x:number, y:number} | undefined> = useRef()
   const [point, setPoint] = useState(prevPointRef.current);
 
   useEffect(()=>{
     prevPointRef.current = point
-    // console.log(prevPointRef.current)
   }, [point])
 
   useEffect(() => {
@@ -22,6 +21,6 @@ export function useFollowPointer(ref: RefObject<HTMLElement>, clicked:boolean) {
 
     return () => window.removeEventListener("pointermove", handlePointerMove);
   }, []);
-  // console.log(point)
+
   return point;
 }

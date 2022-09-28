@@ -1,8 +1,13 @@
 .box {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: var(--accent);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid red;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #container{

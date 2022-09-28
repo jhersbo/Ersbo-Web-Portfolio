@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,IAAI,CAAC;EACD,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,aAAa,EAAE,GAAG;EAClB,UAAU,EAAE,aAAa;CAC5B;;AAED,AAAA,UAAU,CAAA;EACR,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,YAAY;CAC9B",
-    "sources": [
-        "homeScreen.scss"
-    ],
-    "names": [],
-    "file": "homeScreen.css"
-}
