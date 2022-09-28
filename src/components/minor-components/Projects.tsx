@@ -4,35 +4,24 @@ import { useFollowPointer } from "../Function_Modules/useFollowPointer";
 import { useEffect, useRef, useState } from "react";
 
 const Projects = ()=>{
-    const ref = useRef(null);
-    const { x, y } = useFollowPointer(ref);
-    const previous = useRef({x, y})
-    let [point, setPoint] = useState(useFollowPointer(ref))
-
     const [clicked, setClicked] = useState(false)
-    
-    let variants = {
-        clicked:{
-            x, y
-        },
-        unClicked:{
-            x: x,
-            y: y
-        }
-    }
+    const ref = useRef(null);
+    const coords = useFollowPointer(ref, clicked);
+    const previousRef: React.MutableRefObject<{x:number, y:number} | undefined> = useRef()
 
     const handleClick = ()=>{
-        setPoint({ x, y })
-        previous.current = { x, y }
+        // setPoint({ x: coords?.x, y: coords?.y })
+        // previous.current = { x, y }
+        previousRef.current = coords
         setClicked(!clicked)
     }
+
     return(
         <motion.div
         ref={ref}
         className="box"
-        animate={clicked? "clicked": "unclicked"}
-        style={clicked? undefined: previous.current}
-        variants={variants}
+        animate={clicked ? coords : previousRef.current}
+        // style={clicked ? coords : previousRef.current}
         transition={{
             type: "spring",
             damping: 10,
