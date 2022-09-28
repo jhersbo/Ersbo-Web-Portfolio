@@ -1,7 +1,6 @@
 import './sass/styles.scss'
-import HeroNav from './components/HeroNav';
 import LandingScreen from './components/LandingScreen';
-import About from './components/About';
+import HomeScreen from './components/HomeScreen';
 import Cookies from 'cookies-js';
 
 import { ReactNode } from 'react';
@@ -28,7 +27,7 @@ class App extends React.Component<{}, IMyProps>{
     this.setView = this.setView.bind(this)
   }
   setView = (page: string)=>{
-    wait(1500).then(()=>{
+    wait(100).then(()=>{
       this.setState({page: page})
     })
   }
@@ -42,8 +41,7 @@ class App extends React.Component<{}, IMyProps>{
     }else{
       return(
         <div className='app'>
-          <HeroNav/>
-          <About/>
+          <HomeScreen/>
         </div>
       )
     }

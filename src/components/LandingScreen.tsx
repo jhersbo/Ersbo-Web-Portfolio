@@ -8,7 +8,7 @@ const LandingScreen = ({ viewChange }: any)=>{
     const [clicked, setClicked] = useState(false)
 
     const variantsLeft = {
-        clicked: { x: "-100% ", y: "-40%"},
+        clicked: { x: "-200% ", y: "-40%"},
         unclicked: { x: 0 }
     }
     const variantsRight = {
