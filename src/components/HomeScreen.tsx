@@ -7,9 +7,10 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 const HomeScreen = ()=>{
+    
     const ref = useRef(null);
     const { x, y } = useFollowPointer(ref);
-    
+    const previous = useRef({x, y})
     let [point, setPoint] = useState(useFollowPointer(ref))
 
     const [clicked, setClicked] = useState(false)
@@ -26,6 +27,7 @@ const HomeScreen = ()=>{
 
     const handleClick = ()=>{
         setPoint({ x, y })
+        previous.current = { x, y }
         setClicked(!clicked)
     }
 
@@ -35,7 +37,7 @@ const HomeScreen = ()=>{
         ref={ref}
         className="box"
         animate={clicked? "clicked": "unclicked"}
-        style={clicked? undefined: point}
+        style={clicked? undefined: previous.current}
         variants={variants}
         transition={{
             type: "spring",
@@ -44,6 +46,7 @@ const HomeScreen = ()=>{
             restDelta: 0.001
         }}>
             <h1>About Me</h1>
+            <button>Yo</button>
         </motion.div>
     )
 }
