@@ -8,6 +8,11 @@ import { ReactNode } from 'react';
 import React from 'react';
 
 let cookiePage:string = Cookies.get('page')
+
+//lil timer function
+function wait(ms:number){
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 interface IMyProps{
   page: string
 }
@@ -20,7 +25,9 @@ class App extends React.Component<{}, IMyProps>{
     this.setView = this.setView.bind(this)
   }
   setView = (page: string)=>{
-    this.setState({page: page})
+    wait(1500).then(()=>{
+      this.setState({page: page})
+    })
   }
   render(): ReactNode {
     if(this.state.page === 'landing'){

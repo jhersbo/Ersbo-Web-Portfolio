@@ -1,3 +1,13 @@
+//colors
+$orange: #E36414;
+$navy: #13262F;
+$ivory: #FFFDED;
+
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Reem+Kufi+Ink&display=swap');
+$nameFont: 'Reem Kufi Ink', sans-serif;
+$msgFont: 'Kanit', sans-serif;
+
 #top-landing-panels{
     display: flex;
     justify-content: space-around;
@@ -12,6 +22,10 @@
     justify-content: center;
     align-items: center;
     min-height: 25vh;
+    background-color: $ivory;
+    font-family: $msgFont;
+    font-size: 24px;
+    font-weight: 500;
 }
 
 .top-landing-panels{
@@ -22,9 +36,16 @@
 }
 
 #landing-name-div{
-    min-width: 33vw;
+    min-width: 32vw;
+    background-color: $orange;
+    font-family: $nameFont;
+    font-size: 42px;
 }
 
 #landing-role-div{
-    min-width: 66vw;
+    min-width: 68vw;
+    background-color: $navy;
+    font-family: $nameFont;
+    font-size: 42px;
+    color: white;
 }
