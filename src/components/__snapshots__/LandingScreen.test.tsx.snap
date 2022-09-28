@@ -3,6 +3,7 @@
 exports[`passes snapshot test 1`] = `
 <div
   onClick={[Function]}
+  onMouseUp={[Function]}
 >
   <header
     id="top-landing-panels"
@@ -10,19 +11,25 @@ exports[`passes snapshot test 1`] = `
     <div
       className="top-landing-panels"
       id="landing-name-div"
+      style={Object {}}
     >
       <h1
         id="landing-name"
+        style={Object {}}
       >
-        Jack Ersbo
+        Jack
+        <br />
+        Ersbo
       </h1>
     </div>
     <div
       className="top-landing-panels"
       id="landing-role-div"
+      style={Object {}}
     >
       <h1
         id="landing-role"
+        style={Object {}}
       >
         Full-Stack Software Developer
       </h1>
@@ -31,6 +38,7 @@ exports[`passes snapshot test 1`] = `
   <footer
     className="bottom-landing-panel"
     id="landing-footer"
+    style={Object {}}
   >
     <h2>
       Thank you for checking out my site!
@@ -38,7 +46,7 @@ exports[`passes snapshot test 1`] = `
     <h4
       id="landing-click-prompt"
     >
-      *Click anywhere to continue.*
+      *Click anywhere to continue*
     </h4>
   </footer>
 </div>

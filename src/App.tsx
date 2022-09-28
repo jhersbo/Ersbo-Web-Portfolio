@@ -8,6 +8,9 @@ import { ReactNode } from 'react';
 import React from 'react';
 
 let cookiePage:string = Cookies.get('page')
+if(cookiePage){
+  cookiePage = JSON.parse(cookiePage)
+}
 
 //lil timer function
 function wait(ms:number){

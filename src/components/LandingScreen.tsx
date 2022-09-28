@@ -29,7 +29,7 @@ const LandingScreen = ({ viewChange }: any)=>{
                 transition={{ type: "spring", stiffness: 100 }}>
                     <motion.h1 id="landing-name"
                     whileHover={{scale: 1.1,}}
-                    transition={{ type: "spring", stiffness: 400, damping: 8 }}>Jack<br></br>Ersbo</motion.h1>
+                    transition={{ type: "spring", stiffness: 400, damping: 8}}>Jack<br></br>Ersbo</motion.h1>
                 </motion.div>
                 <motion.div id="landing-role-div" className="top-landing-panels"
                 animate={clicked ? "clicked" : "unclicked"} 
