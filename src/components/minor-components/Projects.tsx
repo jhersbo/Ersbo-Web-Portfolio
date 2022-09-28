@@ -10,8 +10,6 @@ const Projects = ()=>{
     const previousRef: React.MutableRefObject<{x:number, y:number} | undefined> = useRef()
 
     const handleClick = ()=>{
-        // setPoint({ x: coords?.x, y: coords?.y })
-        // previous.current = { x, y }
         previousRef.current = coords
         setClicked(!clicked)
     }
@@ -21,7 +19,6 @@ const Projects = ()=>{
         ref={ref}
         className="box"
         animate={clicked ? coords : previousRef.current}
-        // style={clicked ? coords : previousRef.current}
         transition={{
             type: "spring",
             damping: 10,
