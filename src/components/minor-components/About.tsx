@@ -28,7 +28,6 @@ const About = ()=>{
     }
     return(
         <motion.div
-        onTap={()=>{handleClick()}}
         ref={ref}
         className="box"
         animate={clicked? "clicked": "unclicked"}
@@ -40,8 +39,8 @@ const About = ()=>{
             stiffness: 40,
             restDelta: 0.001
         }}>
-            <h1>About Me</h1>
-            <button>Yo</button>
+            <h1 onClick={()=>{handleClick()}}>About Me</h1>
+            <button onClick={()=>{console.log('clicked')}}>Yo</button>
         </motion.div>
     )
 }
