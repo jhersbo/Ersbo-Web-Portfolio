@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
+import { useState, useRef } from 'react'
 import { useFollowPointer } from "../Custom_Hooks/useFollowPointer";
-import { useRef, useState } from "react";
 
-import ProjectsContent from "./micro-components/ProjectsContent";
+import ContactMeContent from "./micro-components/ContactMeContent";
 
-const Projects = ()=>{
+const ContactMe = ()=>{
     const [clicked, setClicked] = useState(false)
     const [expand, setExpand] = useState(false)
 
@@ -30,11 +30,11 @@ const Projects = ()=>{
             stiffness: 50,
             restDelta: 0.001
         }}>
-            <h3 onClick={()=>{handleClick()}}>My Projects</h3>
+            <h3 onClick={()=>{handleClick()}}>Contact Me</h3>
             <button onClick={()=>{setExpand(!expand)}}>Button</button>
-            {expand ? <ProjectsContent/> : null}
+            {expand ? <ContactMeContent/> : null}
         </motion.div>
     )
 }
 
-export default Projects
+export default ContactMe

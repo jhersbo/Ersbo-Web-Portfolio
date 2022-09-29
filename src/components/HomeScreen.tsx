@@ -1,5 +1,6 @@
 import "../sass/homeScreen.scss"
 import About from "./minor-components/About"
+import ContactMe from "./minor-components/ContactMe";
 import Projects from "./minor-components/Projects";
 
 const HomeScreen = ()=>{
@@ -8,6 +9,7 @@ const HomeScreen = ()=>{
         <div id="container">
             <About/>
             <Projects/>
+            <ContactMe/>
         </div>
     )
 }
