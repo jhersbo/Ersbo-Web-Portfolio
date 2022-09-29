@@ -1,5 +1,5 @@
 import './sass/AboutContent.scss'
-import '../sass/About.scss'
+import '../sass/bubbleMenus.scss'
 
 const AboutContent = ()=>{
     return (

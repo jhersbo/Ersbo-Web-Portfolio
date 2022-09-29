@@ -1,4 +1,4 @@
-import './sass/About.scss'
+import './sass/bubbleMenus.scss'
 import { motion } from "framer-motion";
 import { useFollowPointer } from "../Custom_Hooks/useFollowPointer";
 import { useEffect, useRef, useState } from "react";
@@ -51,7 +51,7 @@ const About = ()=>{
             <motion.div
             ref={ref}
             className="expanded-box"
-            animate={{x: 0, y: 0, height: "30vh", width: "75vw"}}
+            animate={{x: "0vw", y: "-3vh", height: "30vh", width: "75vw"}}
             transition={{
                 type: "spring",
                 damping: 10,
@@ -66,7 +66,7 @@ const About = ()=>{
                     style={{
                         border: "10px outset grey", 
                         borderRadius: "50%", 
-                        background: hover ? "grey" : "none", 
+                        background: hover ? "rgba(111,27,27)" : "none", 
                     }}>
                         <CloseIcon sx={{fontSize: "36px"}}/>
                     </button>

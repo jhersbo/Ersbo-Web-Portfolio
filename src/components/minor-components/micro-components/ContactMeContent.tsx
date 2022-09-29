@@ -1,3 +1,5 @@
+import '../sass/bubbleMenus.scss'
+
 const ContactMeContent = ()=>{
     return(
         <div>
