@@ -1,9 +1,15 @@
+import './sass/AboutContent.scss'
+import '../sass/About.scss'
+
 const AboutContent = ()=>{
     return (
-        <div>
-            <h4>Jack Ersbo</h4>
+        <div className='content-container'>
+            <div id="about-header">
+                <h4>Jack Ersbo</h4>
+                <h4>img here</h4>
+            </div>
             <h6>Full-Stack Software Developer</h6>
-            <hr></hr>
+            <p>Content here.</p>
         </div>
     )
 }
