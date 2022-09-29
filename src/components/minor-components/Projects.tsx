@@ -20,6 +20,7 @@ const Projects = ()=>{
         className="box"
         animate={clicked ? coords : previousRef.current}
         whileHover={{scale: 1.1,}}
+        whileTap={{ scale: 0.8 }}
         transition={{
             type: "spring",
             damping: 10,
