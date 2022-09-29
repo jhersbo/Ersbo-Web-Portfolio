@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useFollowPointer } from "../Custom_Hooks/useFollowPointer";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 const About = ()=>{
     const [clicked, setClicked] = useState(false)
