@@ -1,4 +1,4 @@
-import Projects from './Projects';
+import Projects from '../Projects';
 import renderer from 'react-test-renderer'
 
 test('passes snapshot test', () => {
