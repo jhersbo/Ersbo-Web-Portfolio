@@ -1,7 +1,31 @@
 import './sass/AboutContent.scss'
 import '../sass/bubbleMenus.scss'
 
+import { useEffect, useState } from 'react'
+
 const AboutContent = ()=>{
+
+    const [isLoading, setIsLoading] = useState(true)
+
+    useEffect(()=>{
+        const cacheImages = async (srcArr: any)=>{
+            const promises = await srcArr.map((src: string)=>{
+                return new Promise<void>((resolve, reject)=>{
+                    const img: any = new Image()
+
+                    img.src = src
+                    img.onload = resolve()
+                    img.onerror = reject()
+                })
+            })
+            await Promise.all(promises)
+            setIsLoading(false)
+        }
+        const imgs = [`${process.env.PUBLIC_URL}/images/me&millie.jpg`]
+        console.log(imgs)
+        cacheImages(imgs)
+    }, [])
+
     return (
         <div className='about-container'>
             <div id='about-header-content'>
@@ -23,7 +47,11 @@ const AboutContent = ()=>{
                     </p>
                 </div>
             </div>
-            <img src={process.env.PUBLIC_URL + '/images/me&millie.jpg'} id='about-image' alt='Jack Ersbo and his cat, Millie.'></img>
+            {!isLoading ? 
+                <img src={process.env.PUBLIC_URL + '/images/me&millie.jpg'} id='about-image' alt='Jack Ersbo and his cat, Millie.'></img>
+            :
+                null
+            }
         </div>
     )
 }

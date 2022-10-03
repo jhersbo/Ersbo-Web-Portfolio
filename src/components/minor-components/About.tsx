@@ -51,7 +51,7 @@ const About = ()=>{
             <motion.div
             ref={ref}
             className="expanded-box"
-            animate={{x: "0vw", y: "-3vh", height: "fit-content", width: "75vw"}}
+            animate={{x: "0vw", y: "-3vh", height: "42vh", width: "75vw"}}
             transition={{
                 type: "spring",
                 damping: 10,
