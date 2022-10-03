@@ -27,7 +27,7 @@ class App extends React.Component<{}, IMyProps>{
     this.setView = this.setView.bind(this)
   }
   setView = (page: string)=>{
-    wait(100).then(()=>{
+    wait(150).then(()=>{
       this.setState({page: page})
     })
   }

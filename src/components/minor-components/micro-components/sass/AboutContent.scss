@@ -1,4 +1,29 @@
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Reem+Kufi+Ink&display=swap');
+$nameFont: 'Reem Kufi Ink', sans-serif;
+$msgFont: 'Kanit', sans-serif;
+
 #about-header{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+}
+
+.about-container{
+    display: flex;
+    // flex-direction: column;
+}
+
+#name-title-about{
+    font-family: $nameFont;
+}
+
+#content-about{
+    width: 70%;
+}
+
+#about-image{
+    margin-left: auto;
+    margin-right: 1em;
+    height: auto;
+    width: 20%;
 }

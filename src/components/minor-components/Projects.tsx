@@ -51,7 +51,7 @@ const Projects = ()=>{
             <motion.div
             ref={ref}
             className="expanded-box"
-            animate={{x: "8vw", y: "0vh", height: "30vh", width: "75vw"}}
+            animate={{x: "8vw", y: "0vh", height: "fit-content", width: "75vw"}}
             transition={{
                 type: "spring",
                 damping: 10,
