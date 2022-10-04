@@ -41,9 +41,10 @@ const About = ()=>{
                 damping: 10,
                 stiffness: 40,
                 restDelta: 0.001
-            }}>
-                <h3 onClick={()=>{handleClick()}}>About Me</h3>
-                <button onClick={()=>{setExpand(!expand)}}>Button</button>
+            }}
+            onClick={()=>{handleClick()}}>
+                <h3 >About Me</h3>
+                <button onClick={()=>{setExpand(!expand)}}>Expand</button>
             </motion.div>
         )
     }else{
@@ -63,7 +64,7 @@ const About = ()=>{
                     <button 
                     onMouseEnter={()=>{setHover(true)}} 
                     onMouseLeave={()=>{setHover(false)}} 
-                    onClick={()=>{setExpand(!expand)}} 
+                    onClick={()=>{setExpand(!expand); setClicked(false)}} 
                     style={{
                         border: "5px solid white",
                         boxShadow: hover ? "none" : "2px 2px 15px black",  

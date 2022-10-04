@@ -22,7 +22,6 @@ const AboutContent = ()=>{
             setIsLoading(false)
         }
         const imgs = [`${process.env.PUBLIC_URL}/images/me&millie.jpg`]
-        console.log(imgs)
         cacheImages(imgs)
     }, [])
 
