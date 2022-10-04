@@ -65,14 +65,14 @@ const About = ()=>{
                     onMouseLeave={()=>{setHover(false)}} 
                     onClick={()=>{setExpand(!expand)}} 
                     style={{
-                        border: "3px solid white",
+                        border: "5px solid white",
                         boxShadow: hover ? "none" : "2px 2px 15px black",  
                         borderRadius: "50%",
                         height: "60px",
                         width: "68px",
                         marginLeft: "1em",
                         marginTop: "1em", 
-                        background: "#242F40"
+                        background: hover ? "#161d27" : "#242F40"
                         // background: hover ? "black" : "none", 
                     }}>
                             <CloseIcon sx={{fontSize: "36px", color: "white"}}/>
