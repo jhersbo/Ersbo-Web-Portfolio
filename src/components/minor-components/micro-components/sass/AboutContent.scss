@@ -8,18 +8,23 @@ $msgFont: 'Kanit', sans-serif;
     justify-content: flex-start;
 }
 
+#about-header-content{
+    // background-color: white;
+}
+
 .about-container{
     display: flex;
-    // flex-direction: column;
+    color: white;
 }
 
 #name-title-about{
     font-family: $nameFont;
+    align-items: center;
 }
 
 #content-about{
-    width: 70%;
-    margin-bottom: 1em;
+    width: 80%;
+    font-family: $nameFont;
 }
 
 #about-image{
@@ -27,4 +32,8 @@ $msgFont: 'Kanit', sans-serif;
     margin-right: 1em;
     height: fit-content;
     width: 20%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
+
+    align-self: center;
 }

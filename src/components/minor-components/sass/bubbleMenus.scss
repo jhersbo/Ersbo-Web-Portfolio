@@ -1,3 +1,5 @@
+$gunmetal: #242F40;
+
 .box {
     width: 150px;
     height: 150px;
@@ -20,9 +22,9 @@
     margin-left: 3em;
     padding: 0.25em 3em;
     border-radius: 10% / 80%;
-    // background-color: #DADFF7;
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(147,67,67,1) 0%, rgba(111,27,27,1) 90% );
-    z-index: 3;
+    background-color: $gunmetal;
+    // background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(147,67,67,1) 0%, rgba(111,27,27,1) 90% );
+    // z-index: 3;
     // min-height: max-content;
     // position: absolute;
 }

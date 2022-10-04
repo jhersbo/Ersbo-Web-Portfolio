@@ -2,6 +2,7 @@
 $orange: #E36414;
 $navy: #13262F;
 $ivory: #FFFDED;
+$gunmetal: #242F40;
 
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Reem+Kufi+Ink&display=swap');
@@ -44,7 +45,7 @@ $msgFont: 'Kanit', sans-serif;
 
 #landing-role-div{
     min-width: 68vw;
-    background-color: $navy;
+    background-color: $gunmetal;
     font-family: $nameFont;
     font-size: 42px;
     color: white;

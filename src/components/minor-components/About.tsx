@@ -51,11 +51,12 @@ const About = ()=>{
             <motion.div
             ref={ref}
             className="expanded-box"
-            animate={{x: "0vw", y: "-3vh", height: "42vh", width: "75vw"}}
+            animate={{x: "0vw", y: "-3vh",  width: "75vw"}}
+            style={{height: "fit-content",}}
             transition={{
                 type: "spring",
-                damping: 10,
-                stiffness: 40,
+                damping: 15,
+                stiffness: 80,
                 restDelta: 0.001
             }}>
                 <div className='expanded-container'>
@@ -64,15 +65,17 @@ const About = ()=>{
                     onMouseLeave={()=>{setHover(false)}} 
                     onClick={()=>{setExpand(!expand)}} 
                     style={{
-                        border: "10px outset grey", 
+                        border: "3px solid white",
+                        boxShadow: hover ? "none" : "2px 2px 15px black",  
                         borderRadius: "50%",
                         height: "60px",
                         width: "68px",
                         marginLeft: "1em",
                         marginTop: "1em", 
-                        background: hover ? "rgba(111,27,27)" : "none", 
+                        background: "#242F40"
+                        // background: hover ? "black" : "none", 
                     }}>
-                            <CloseIcon sx={{fontSize: "36px"}}/>
+                            <CloseIcon sx={{fontSize: "36px", color: "white"}}/>
                     </button>
                     <div className='content-container'>
                         <AboutContent/>
