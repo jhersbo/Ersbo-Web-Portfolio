@@ -10,7 +10,6 @@ import CloseIcon from '@mui/icons-material/Close';
 const About = ()=>{
     const [clicked, setClicked] = useState(false)
     const [expand, setExpand] = useState(false)
-    const [hover, setHover] = useState(false)
     
     const ref = useRef(null);
     const coords = useFollowPointer(ref);
@@ -20,12 +19,6 @@ const About = ()=>{
         previousRef.current = coords
         setClicked(!clicked)
     }
-
-    useEffect(()=>{
-        if(!expand){
-            setHover(false)
-        }
-    }, [expand])
 
     if(!expand){
         return(
@@ -62,8 +55,6 @@ const About = ()=>{
             }}>
                 <div className='expanded-container'>
                     <button 
-                    onMouseEnter={()=>{setHover(true)}} 
-                    onMouseLeave={()=>{setHover(false)}} 
                     onClick={()=>{setExpand(!expand); setClicked(false)}} 
                     style={{
                         
