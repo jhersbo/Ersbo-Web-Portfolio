@@ -9,12 +9,16 @@ $msgFont: 'Kanit', sans-serif;
 }
 
 #about-header-content{
-    // background-color: white;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px black;
+    margin-right: 1em;
+    padding-left: 1em;
 }
 
 .about-container{
     display: flex;
-    color: white;
+    color: black;
 }
 
 #name-title-about{

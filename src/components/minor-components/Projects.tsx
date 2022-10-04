@@ -14,7 +14,7 @@ const Projects = ()=>{
 
     const ref = useRef(null);
     const coords = useFollowPointer(ref);
-    const previousRef: React.MutableRefObject<{x:number, y:number} | undefined> = useRef()
+    const previousRef: React.MutableRefObject<{x:number, y:number} | undefined> = useRef({x: 0, y: 600})
 
     const handleClick = ()=>{
         previousRef.current = coords

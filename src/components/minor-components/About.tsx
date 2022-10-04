@@ -14,7 +14,7 @@ const About = ()=>{
     
     const ref = useRef(null);
     const coords = useFollowPointer(ref);
-    const previousRef: React.MutableRefObject<{x:number, y:number} | undefined> = useRef()
+    const previousRef: React.MutableRefObject<{x:number, y:number} | undefined> = useRef({x: 0, y: 0})
 
     const handleClick = ()=>{
         previousRef.current = coords
@@ -66,16 +66,8 @@ const About = ()=>{
                     onMouseLeave={()=>{setHover(false)}} 
                     onClick={()=>{setExpand(!expand); setClicked(false)}} 
                     style={{
-                        border: "5px solid white",
-                        boxShadow: hover ? "none" : "2px 2px 15px black",  
-                        borderRadius: "50%",
-                        height: "60px",
-                        width: "68px",
-                        marginLeft: "1em",
-                        marginTop: "1em", 
-                        background: hover ? "#161d27" : "#242F40"
-                        // background: hover ? "black" : "none", 
-                    }}>
+                        
+                    }} className='close-button'>
                             <CloseIcon sx={{fontSize: "36px", color: "white"}}/>
                     </button>
                     <div className='content-container'>
