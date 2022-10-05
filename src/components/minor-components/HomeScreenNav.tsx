@@ -1,6 +1,7 @@
 import './sass/homeScreenNav.scss'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+
 import { motion } from 'framer-motion'
 
 const HomeScreenNav = ()=>{
