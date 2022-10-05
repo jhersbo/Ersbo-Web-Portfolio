@@ -6,6 +6,7 @@ import { useRef, useState } from "react";
 import AboutContent from "./micro-components/AboutContent";
 
 import CloseIcon from '@mui/icons-material/Close';
+import OpenInFullRoundedIcon from '@mui/icons-material/OpenInFullRounded';
 
 const About = ()=>{
     const [clicked, setClicked] = useState(false)
@@ -37,7 +38,9 @@ const About = ()=>{
             }}
             onClick={()=>{handleClick()}}>
                 <h3>About Me</h3>
-                <button className='expand' onClick={()=>{setExpand(!expand)}}>Expand</button>
+                <button className='expand' onClick={()=>{setExpand(!expand)}}>
+                    <OpenInFullRoundedIcon sx={{color: "white", fontSize: "30px"}}/>
+                </button>
             </motion.div>
         )
     }else{

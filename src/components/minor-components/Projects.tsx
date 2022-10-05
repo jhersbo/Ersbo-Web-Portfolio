@@ -1,7 +1,7 @@
 import './sass/bubbleMenus.scss'
 import { motion } from "framer-motion";
 import { useFollowPointer } from "../Custom_Hooks/useFollowPointer";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 
 import ProjectsContent from "./micro-components/ProjectsContent";
 
@@ -10,7 +10,6 @@ import CloseIcon from '@mui/icons-material/Close';
 const Projects = ()=>{
     const [clicked, setClicked] = useState(false)
     const [expand, setExpand] = useState(false)
-    const [hover, setHover] = useState(false)
 
     const ref = useRef(null);
     const coords = useFollowPointer(ref);
@@ -20,12 +19,6 @@ const Projects = ()=>{
         previousRef.current = coords
         setClicked(!clicked)
     }
-
-    useEffect(()=>{
-        if(!expand){
-            setHover(false)
-        }
-    }, [expand])
 
     if(!expand){
         return(
@@ -51,7 +44,7 @@ const Projects = ()=>{
             <motion.div
             ref={ref}
             className="expanded-box"
-            animate={{x: "3vw", y: "14vh", height: "fit-content", width: "75vw"}}
+            animate={{x: "3vw", y: "14vh", width: "75vw"}}
             style={{height: "fit-content",}}
             transition={{
                 type: "spring",
@@ -59,14 +52,16 @@ const Projects = ()=>{
                 stiffness: 40,
                 restDelta: 0.001
             }}>
-                <div className='content-container'>
+                <div className='expanded-container'>
                     <button 
                     onClick={()=>{setExpand(!expand); setClicked(false)}}
                     className='close-button' 
                     >
                         <CloseIcon sx={{fontSize: "36px", color: "white"}}/>
                     </button>
-                    <ProjectsContent/>
+                    <div className='content-container'>
+                        <ProjectsContent/>
+                    </div>
                 </div>
             </motion.div>
         )
