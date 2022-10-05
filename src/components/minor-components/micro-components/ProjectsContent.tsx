@@ -8,34 +8,11 @@ import TheSocialApp from './web-project-components/TheSocialApp'
 
 import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 const ProjectsContent = ()=>{
-
-    const [isLoading, setIsLoading] = useState(true)
     // -1 is the thumbnail state
     const [clickExpand, setClickExpand] = useState(-1)
-
-    useEffect(()=>{
-        const cacheImages = async (srcArr: any)=>{
-            const promises = await srcArr.map((src: string)=>{
-                return new Promise<void>((resolve, reject)=>{
-                    const img: any = new Image()
-                    img.src = src
-                    img.onload = resolve()
-                    img.onerror = reject()
-                })
-            })
-            await Promise.all(promises)
-            setIsLoading(false)
-        }
-        const imgs = [
-            `${process.env.PUBLIC_URL}/images/project_screenshots/Listr/Account.jpg`,
-            `${process.env.PUBLIC_URL}/images/project_screenshots/Listr/Home.jpg`,
-            `${process.env.PUBLIC_URL}/images/project_screenshots/Listr/List.jpg`,
-        ]
-        cacheImages(imgs)
-    }, [])
 
     const projectList = [
         {
