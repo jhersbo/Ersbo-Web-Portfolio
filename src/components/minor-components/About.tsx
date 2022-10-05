@@ -36,8 +36,8 @@ const About = ()=>{
                 restDelta: 0.001
             }}
             onClick={()=>{handleClick()}}>
-                <h3 >About Me</h3>
-                <button onClick={()=>{setExpand(!expand)}}>Expand</button>
+                <h3>About Me</h3>
+                <button className='expand' onClick={()=>{setExpand(!expand)}}>Expand</button>
             </motion.div>
         )
     }else{
@@ -56,9 +56,7 @@ const About = ()=>{
                 <div className='expanded-container'>
                     <button 
                     onClick={()=>{setExpand(!expand); setClicked(false)}} 
-                    style={{
-                        
-                    }} className='close-button'>
+                    className='close-button'>
                             <CloseIcon sx={{fontSize: "36px", color: "white"}}/>
                     </button>
                     <div className='content-container'>

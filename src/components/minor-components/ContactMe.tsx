@@ -1,7 +1,7 @@
 import './sass/bubbleMenus.scss'
 
 import { motion } from "framer-motion";
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef } from 'react'
 import { useFollowPointer } from "../Custom_Hooks/useFollowPointer";
 
 import ContactMeContent from "./micro-components/ContactMeContent";
@@ -10,22 +10,15 @@ import CloseIcon from '@mui/icons-material/Close';
 const ContactMe = ()=>{
     const [clicked, setClicked] = useState(false)
     const [expand, setExpand] = useState(false)
-    const [hover, setHover] = useState(false)
     
     const ref = useRef(null);
     const coords = useFollowPointer(ref);
-    const previousRef: React.MutableRefObject<{x:number, y:number} | undefined> = useRef({x: 0, y: 300})
+    const previousRef: React.MutableRefObject<{x:number, y:number} | undefined> = useRef({x: 0, y: 500})
 
     const handleClick = ()=>{
         previousRef.current = coords
         setClicked(!clicked)
     }
-
-    useEffect(()=>{
-        if(!expand){
-            setHover(false)
-        }
-    }, [expand])
 
     if(!expand){
         return(
@@ -41,9 +34,11 @@ const ContactMe = ()=>{
                 damping: 10,
                 stiffness: 40,
                 restDelta: 0.001
-            }}>
-                <h3 onClick={()=>{handleClick()}}>Get in touch</h3>
-                <button onClick={()=>{setExpand(!expand)}}>Button</button>
+            }}
+            onClick={()=>{handleClick()}}
+            >
+                <h3>Get in touch</h3>
+                <button className='expand' onClick={()=>{setExpand(!expand)}}>Expand</button>
             </motion.div>
         )
     }else{
@@ -52,6 +47,7 @@ const ContactMe = ()=>{
             ref={ref}
             className="expanded-box"
             animate={{x: "0vw", y: "16vh", height: "fit-content", width: "75vw"}}
+            style={{height: "fit-content",}}
             transition={{
                 type: "spring",
                 damping: 10,
@@ -60,15 +56,10 @@ const ContactMe = ()=>{
             }}>
                 <div className='content-container'>
                     <button 
-                    onMouseEnter={()=>{setHover(true)}} 
-                    onMouseLeave={()=>{setHover(false)}} 
-                    onClick={()=>{setExpand(!expand)}} 
-                    style={{
-                        border: "10px outset grey", 
-                        borderRadius: "50%", 
-                        background: hover ? "rgba(111,27,27)" : "none", 
-                    }}>
-                        <CloseIcon sx={{fontSize: "36px"}}/>
+                    onClick={()=>{setExpand(!expand); setClicked(false)}}
+                    className='close-button' 
+                    >
+                        <CloseIcon sx={{fontSize: "36px", color: "white"}}/>
                     </button>
                     <ContactMeContent/>
                 </div>

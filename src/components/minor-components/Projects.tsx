@@ -14,7 +14,7 @@ const Projects = ()=>{
 
     const ref = useRef(null);
     const coords = useFollowPointer(ref);
-    const previousRef: React.MutableRefObject<{x:number, y:number} | undefined> = useRef({x: 0, y: 500})
+    const previousRef: React.MutableRefObject<{x:number, y:number} | undefined> = useRef({x: 0, y: 300})
 
     const handleClick = ()=>{
         previousRef.current = coords
@@ -43,7 +43,7 @@ const Projects = ()=>{
                 restDelta: 0.001
             }}>
                 <h3 onClick={()=>{handleClick()}}>My Projects</h3>
-                <button onClick={()=>{setExpand(!expand)}}>Button</button>
+                <button className='expand' onClick={()=>{setExpand(!expand)}}>Expand</button>
             </motion.div>
         )
     }else{
@@ -51,7 +51,8 @@ const Projects = ()=>{
             <motion.div
             ref={ref}
             className="expanded-box"
-            animate={{x: "8vw", y: "14vh", height: "fit-content", width: "75vw"}}
+            animate={{x: "3vw", y: "14vh", height: "fit-content", width: "75vw"}}
+            style={{height: "fit-content",}}
             transition={{
                 type: "spring",
                 damping: 10,
@@ -60,15 +61,10 @@ const Projects = ()=>{
             }}>
                 <div className='content-container'>
                     <button 
-                    onMouseEnter={()=>{setHover(true)}} 
-                    onMouseLeave={()=>{setHover(false)}} 
-                    onClick={()=>{setExpand(!expand)}} 
-                    style={{
-                        border: "10px outset grey", 
-                        borderRadius: "50%", 
-                        background: hover ? "rgba(111,27,27)" : "none", 
-                    }}>
-                        <CloseIcon sx={{fontSize: "36px"}}/>
+                    onClick={()=>{setExpand(!expand); setClicked(false)}}
+                    className='close-button' 
+                    >
+                        <CloseIcon sx={{fontSize: "36px", color: "white"}}/>
                     </button>
                     <ProjectsContent/>
                 </div>
