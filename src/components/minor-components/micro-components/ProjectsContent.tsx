@@ -1,11 +1,17 @@
 import './sass/ProjectsContent.scss'
 import '../sass/bubbleMenus.scss'
 
+import Listr from './web-project-components/Listr'
+import Parkspot from './web-project-components/Parkspot'
+import MarshesMelons from './web-project-components/MarshesMelons'
+
 import { useEffect, useState } from "react"
 
 const ProjectsContent = ()=>{
 
     const [isLoading, setIsLoading] = useState(true)
+    // -1 is the thumbnail state
+    const [clickExpand, setClickExpand] = useState(-1)
 
     useEffect(()=>{
         const cacheImages = async (srcArr: any)=>{
@@ -34,17 +40,20 @@ const ProjectsContent = ()=>{
             thumbNailImg: `${process.env.PUBLIC_URL}/images/project_screenshots/Listr/Home.jpg`,
             alt: "Listr home screen",
             projectStack: "Node.js, React.js, PostgreSQL/Sequelize, Express.js",
-            projectDescription: "A fully CRUD-enabled list making application. Click to learn more."
+            projectDescription: "A fully CRUD-enabled list making application. Click to learn more.",
+            jsxElement: <Listr/>
         },
         {
-            title: "Parkspot"
-        },
-        {
-            title: "Marshes' Melons"
+            title: "Parkspot",
+            jsxElement: <Parkspot/>
         },
         {
             title: "The Social App"
-        }
+        },
+        {
+            title: "Marshes' Melons",
+            jsxElement: <MarshesMelons/>
+        },
     ]
 
     const renderProjectList = ()=>{
@@ -52,7 +61,8 @@ const ProjectsContent = ()=>{
             return(
                 <div className='project-thumbnail' key={index} style={{
                     width: `${100 / projectList.length - 6}%`
-                }}>
+                }}
+                onClick={()=>{setClickExpand(index)}}>
                     <h3>{element.title}</h3>
                     <h5>Tech Stack: {element.projectStack}</h5>
                     <p className='project-thumbnail-description'>{element.projectDescription}</p>
@@ -68,9 +78,15 @@ const ProjectsContent = ()=>{
                 <div id="projects-header">
                     <h1>My Web Projects</h1>
                 </div>
-                <div id='project-thumbnail-container'>
-                    {renderProjectList()}
-                </div>
+                {clickExpand === -1 ?
+                    <div id='project-thumbnail-container'>
+                        {renderProjectList()}
+                    </div>
+                :
+                    <div id='project-expanded-container'>
+                        {projectList[clickExpand].jsxElement}
+                    </div>
+                }
             </div>
         </div>
     )

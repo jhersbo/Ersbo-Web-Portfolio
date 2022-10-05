@@ -18,6 +18,7 @@ $msgFont: 'Kanit', sans-serif;
 }
 
 .project-thumbnail{
+    cursor: pointer;
     background-color: white;
     width: fit-content;
     border-radius: 15px;
@@ -25,7 +26,6 @@ $msgFont: 'Kanit', sans-serif;
     padding: 0.5em;
 }
 
-// .project-thumbnail-image{
-//     width: 80%;
-//     height: auto;
-// }
+#project-expanded-container{
+    background-color: white;
+}
