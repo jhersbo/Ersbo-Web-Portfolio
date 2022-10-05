@@ -4,6 +4,9 @@ import '../sass/bubbleMenus.scss'
 import Listr from './web-project-components/Listr'
 import Parkspot from './web-project-components/Parkspot'
 import MarshesMelons from './web-project-components/MarshesMelons'
+import TheSocialApp from './web-project-components/TheSocialApp'
+
+import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 
 import { useEffect, useState } from "react"
 
@@ -45,13 +48,17 @@ const ProjectsContent = ()=>{
         },
         {
             title: "Parkspot",
+            projectStack: "Node.js, React.js, PostgreSQL/Sequelize, Express.js",
             jsxElement: <Parkspot/>
         },
         {
-            title: "The Social App"
+            title: "The Social App",
+            projectStack: "Node.js, React.js, PostgreSQL/Sequelize, Express.js",
+            jsxElement: <TheSocialApp/>
         },
         {
             title: "Marshes' Melons",
+            projectStack: "Node.js, jQuery, Phaser.js, Express.js, MongoDB",
             jsxElement: <MarshesMelons/>
         },
     ]
@@ -84,7 +91,12 @@ const ProjectsContent = ()=>{
                     </div>
                 :
                     <div id='project-expanded-container'>
-                        {projectList[clickExpand].jsxElement}
+                        <button id='arrow-back' onClick={()=>{setClickExpand(-1)}}>
+                            <ArrowBackRoundedIcon sx={{fontSize: "36px"}}/>
+                        </button>
+                        <div id='project-expanded-content'>
+                            {projectList[clickExpand].jsxElement}
+                        </div>
                     </div>
                 }
             </div>

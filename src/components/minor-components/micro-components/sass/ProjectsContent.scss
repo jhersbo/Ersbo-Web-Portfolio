@@ -27,5 +27,13 @@ $msgFont: 'Kanit', sans-serif;
 }
 
 #project-expanded-container{
+    display: flex;
     background-color: white;
+}
+
+#arrow-back{
+    cursor: pointer;
+    top: 0;
+    background-color: transparent;
+    border: none;
 }

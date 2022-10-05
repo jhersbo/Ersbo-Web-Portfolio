@@ -6,6 +6,7 @@ import { useRef, useState } from "react";
 import ProjectsContent from "./micro-components/ProjectsContent";
 
 import CloseIcon from '@mui/icons-material/Close';
+import OpenInFullRoundedIcon from '@mui/icons-material/OpenInFullRounded';
 
 const Projects = ()=>{
     const [clicked, setClicked] = useState(false)
@@ -36,7 +37,9 @@ const Projects = ()=>{
                 restDelta: 0.001
             }}>
                 <h3 onClick={()=>{handleClick()}}>My Projects</h3>
-                <button className='expand' onClick={()=>{setExpand(!expand)}}>Expand</button>
+                <button className='expand' onClick={()=>{setExpand(!expand)}}>
+                    <OpenInFullRoundedIcon sx={{color: "white", fontSize: "30px"}}/>
+                </button>
             </motion.div>
         )
     }else{
