@@ -12,7 +12,7 @@ import { useState } from "react"
 
 const ProjectsContent = ()=>{
     // -1 is the thumbnail state
-    const [clickExpand, setClickExpand] = useState(-1)
+    const [clickExpandIndex, setClickExpandIndex] = useState(-1)
 
     const projectList = [
         {
@@ -46,7 +46,7 @@ const ProjectsContent = ()=>{
                 <div className='project-thumbnail' key={index} style={{
                     width: `${100 / projectList.length - 6}%`
                 }}
-                onClick={()=>{setClickExpand(index)}}>
+                onClick={()=>{setClickExpandIndex(index)}}>
                     <h3>{element.title}</h3>
                     <h5>Tech Stack: {element.projectStack}</h5>
                     <p className='project-thumbnail-description'>{element.projectDescription}</p>
@@ -62,17 +62,17 @@ const ProjectsContent = ()=>{
                 <div id="projects-header">
                     <h1>My Web Projects</h1>
                 </div>
-                {clickExpand === -1 ?
+                {clickExpandIndex === -1 ?
                     <div id='project-thumbnail-container'>
                         {renderProjectList()}
                     </div>
                 :
                     <div id='project-expanded-container'>
-                        <button id='arrow-back' onClick={()=>{setClickExpand(-1)}}>
+                        <button id='arrow-back' onClick={()=>{setClickExpandIndex(-1)}}>
                             <ArrowBackRoundedIcon sx={{fontSize: "36px"}}/>
                         </button>
                         <div id='project-expanded-content'>
-                            {projectList[clickExpand].jsxElement}
+                            {projectList[clickExpandIndex].jsxElement}
                         </div>
                     </div>
                 }
