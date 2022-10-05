@@ -13,7 +13,7 @@ const About = ()=>{
     
     const ref = useRef(null);
     const coords = useFollowPointer(ref);
-    const previousRef: React.MutableRefObject<{x:number, y:number} | undefined> = useRef({x: 0, y: 0})
+    const previousRef: React.MutableRefObject<{x:number, y:number} | undefined> = useRef({x: 0, y: 100})
 
     const handleClick = ()=>{
         previousRef.current = coords
@@ -45,7 +45,7 @@ const About = ()=>{
             <motion.div
             ref={ref}
             className="expanded-box"
-            animate={{x: "0vw", y: "-3vh",  width: "75vw"}}
+            animate={{x: "0vw", y: "0vh",  width: "75vw"}}
             style={{height: "fit-content",}}
             transition={{
                 type: "spring",

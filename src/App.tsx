@@ -17,15 +17,29 @@ function wait(ms:number){
 }
 interface IMyProps{
   page: string
+  thinScreenBool: boolean
 }
 class App extends React.Component<{}, IMyProps>{
   constructor(props: any){
     super(props);
     this.state = {
       page: cookiePage? cookiePage: 'landing',
+      thinScreenBool: false
     }
     this.setView = this.setView.bind(this)
   }
+
+  componentDidMount(): void {
+    window.addEventListener("resize", this.resize.bind(this))
+    this.resize()
+  }
+  resize(){
+    this.setState({thinScreenBool: window.innerWidth <= 900})
+  }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.resize.bind(this));
+  }
+
   setView = (page: string)=>{
     wait(150).then(()=>{
       this.setState({page: page})
@@ -35,13 +49,13 @@ class App extends React.Component<{}, IMyProps>{
     if(this.state.page === 'landing'){
       return(
         <div className='app'>
-          <LandingScreen viewChange={this.setView}/>
+          <LandingScreen viewChange={this.setView} thinScreenBool={this.state.thinScreenBool}/>
         </div>
       )
     }else{
       return(
         <div className='app'>
-          <HomeScreen/>
+          <HomeScreen thinScreenBool={this.state.thinScreenBool}/>
         </div>
       )
     }

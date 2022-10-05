@@ -3,8 +3,12 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import '../sass/landingScreen.scss'
 
-const LandingScreen = ({ viewChange }: any)=>{
+interface LandingScreenProps{
+    viewChange: any,
+    thinScreenBool: boolean
+}
 
+const LandingScreen = ({ viewChange, thinScreenBool }: LandingScreenProps)=>{
     const [clicked, setClicked] = useState(false)
 
     const variantsLeft = {
