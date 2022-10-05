@@ -15,6 +15,11 @@ $msgFont: 'Kanit', sans-serif;
 #project-thumbnail-container{
     display: flex;
     justify-content: space-around;
+    padding: 1em 0;
+
+    //not sure I want to keep the below
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 50px black;
 }
 
 .project-thumbnail{
