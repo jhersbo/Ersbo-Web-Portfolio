@@ -20,11 +20,10 @@ $gunmetal: #242F40;
 }
 
 .expanded-box{
-    // border: 5px inset #B5B2C2;
     margin-left: 3em;
     padding: 0.25em 3em;
     border-radius: 10% / 80%;
-    // background-color: $gunmetal;
+    box-shadow: inset -10px -5px 50px black;
     background: rgb(36,47,64);
     background: radial-gradient(circle, rgba(36,47,64,1) 0%, rgba(43,53,70,1) 93%, rgba(6,9,13,1) 100%);
 }

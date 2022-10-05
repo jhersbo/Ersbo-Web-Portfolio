@@ -43,6 +43,9 @@ const HomeScreenNav = ()=>{
 
     return(
         <div id='homescreen-nav'>
+            {/* <div>
+                <h1>JackErsbo.com</h1>
+            </div> */}
             <ul style={{listStyleType: "none"}}>
                 {renderNav()}
             </ul>

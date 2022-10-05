@@ -1,7 +1,31 @@
+$ivory: #FFFDED;
+$off-white: #EDEFFF;
+$grey: #212529;
+$orange: #E36414;
+$slate-grey: #5F758E;
+
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Reem+Kufi+Ink&display=swap');
+$nameFont: 'Reem Kufi Ink', sans-serif;
+$msgFont: 'Kanit', sans-serif;
+
+#homescreen-nav{
+    background-color: $off-white;
+    box-shadow: 0px 5px 10px $grey;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    // display: flex;
+    // justify-content: space-around;
+    font-family: $nameFont;
+}
+
 #homescreen-nav > ul{
     display: flex;
     justify-content: space-around;
 }
+
 
 .nav-icon:hover{
     cursor: pointer;

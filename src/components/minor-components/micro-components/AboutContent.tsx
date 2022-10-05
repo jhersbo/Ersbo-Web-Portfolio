@@ -38,10 +38,10 @@ const AboutContent = ()=>{
                         I am a motivated, curious, flexible individual with a passion for web development.
                     </p>
                     <p>
-                        I graduated from the ThriveDX (formerly HackerU) web development bootcamp as part of the University of Wisconsin College of Engineering in June 2022. Since then, I have been honing my skills and understanding of creating and maintaining larger and larger applications with relational and non-relational (NoSQL) databases.
+                        I graduated from the ThriveDX (formerly HackerU) web development bootcamp as part of the University of Wisconsin College of Engineering in June 2022. Since then, I have been honing my skills and understanding of creating and maintaining larger applications with relational and non-relational (NoSQL) databases.
                     </p>
                     <p>
-                        I have experience and am proficient in HTML, JavaScript/JSX/TypeScript, CSS, Python, and Go programming languages and experience with various libraries, such as React, Redux, Express, MongoDB, and PostgreSQL/Sequelize ORM.
+                        I have experience and am proficient in <b>HTML, CSS, JavaScript/JSX/TypeScript, Python, and Go</b> programming languages and experience with various libraries, such as <b>React, Redux, Express, MongoDB, and PostgreSQL/Sequelize ORM</b>.
                     </p>
                 </div>
             </div>
