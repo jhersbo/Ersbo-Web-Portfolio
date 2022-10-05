@@ -1,7 +1,7 @@
 import './sass/bubbleMenus.scss'
 import { motion } from "framer-motion";
 import { useFollowPointer } from "../Custom_Hooks/useFollowPointer";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 import AboutContent from "./micro-components/AboutContent";
 
