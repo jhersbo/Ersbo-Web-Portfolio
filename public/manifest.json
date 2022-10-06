@@ -3,19 +3,29 @@
   "name": "Jack Ersbo's Web Portfolio",
   "icons": [
     {
-      "src": "",
-      "sizes": "",
-      "type": ""
+      "src": "./favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
     },
     {
-      "src": "",
-      "type": "",
+      "src": "./favicons/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "./favicons/apple-touch-icon.png",
+      "type": "image/png",
       "sizes": ""
     },
     {
-      "src": "",
-      "type": "",
-      "sizes": ""
+      "src": "./favicons/favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "./favicons/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
     }
   ],
   "start_url": ".",
