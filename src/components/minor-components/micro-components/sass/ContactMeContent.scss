@@ -17,7 +17,12 @@ $gunmetal: #242F40;
 
 #download-container{
     display: flex;
-    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0em 1em;
+    border-radius: 15px;
+    border: 2px solid white;
+    box-shadow: inset 1px 1px 20px black;
 }
 
 #contact-content{
@@ -42,7 +47,7 @@ $gunmetal: #242F40;
     cursor: pointer;
 }
 
-#resume-download-btn{
+.contact-btn{
     cursor: pointer;
     color: white;
     background-color: $gunmetal;
@@ -56,6 +61,6 @@ $gunmetal: #242F40;
     box-shadow: 1px 1px 10px black;
 }
 
-#resume-download-btn:hover{
+.contact-btn:hover{
     box-shadow: inset 1px 1px 25px black;
 }

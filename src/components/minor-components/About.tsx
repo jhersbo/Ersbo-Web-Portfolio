@@ -48,7 +48,7 @@ const About = ()=>{
             <motion.div
             ref={ref}
             className="expanded-box"
-            animate={{x: "0vw", y: "12vh",  width: "75vw"}}
+            animate={{x: "5vw", y: "12vh",  width: "75vw"}}
             style={{height: "fit-content",}}
             whileHover={{scale: 1.01}}
             transition={{

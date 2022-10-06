@@ -53,7 +53,10 @@ const ContactMeContent = ()=>{
                     </ul>
                 </div>
                 <div id='download-container'>
-                    <button id='resume-download-btn' onClick={()=>{handleDownloadClick()}}>Download my resume!</button>
+                    <button className="contact-btn" id='resume-download-btn' onClick={()=>{handleDownloadClick()}}>Download my resume!</button>
+                    <button className='contact-btn' onClick={()=>{
+                        openInNewTab("mailto:jhersbo@gmail.com")
+                    }}>Send me an email!</button>
                 </div>
             </div>
         </div>

@@ -51,7 +51,7 @@ const ContactMe = ()=>{
             <motion.div
             ref={ref}
             className="expanded-box"
-            animate={{x: "0vw", y: "16vh", height: "fit-content", width: "75vw"}}
+            animate={{x: "5vw", y: "16vh", height: "fit-content", width: "75vw"}}
             whileHover={{scale: 1.01}}
             style={{height: "fit-content",}}
             transition={{
