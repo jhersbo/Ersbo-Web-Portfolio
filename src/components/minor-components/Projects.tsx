@@ -35,8 +35,10 @@ const Projects = ()=>{
                 damping: 10,
                 stiffness: 40,
                 restDelta: 0.001
-            }}>
-                <h3 onClick={()=>{handleClick()}}>My Projects</h3>
+            }}
+            onClick={()=>{handleClick()}}
+            >
+                <h3>My Projects</h3>
                 <button className='expand' onClick={()=>{setExpand(!expand)}}>
                     <OpenInFullRoundedIcon sx={{color: "white", fontSize: "30px"}}/>
                 </button>
