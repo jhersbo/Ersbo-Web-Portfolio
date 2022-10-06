@@ -7,7 +7,7 @@ import MarshesMelons from './web-project-components/MarshesMelons'
 import TheSocialApp from './web-project-components/TheSocialApp'
 
 import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
-
+import { motion } from "framer-motion"
 import { useState } from "react"
 
 const ProjectsContent = ()=>{
@@ -20,22 +20,25 @@ const ProjectsContent = ()=>{
             thumbNailImg: `${process.env.PUBLIC_URL}/images/project_screenshots/Listr/Home.jpg`,
             alt: "Listr home screen",
             projectStack: "Node.js, React.js, PostgreSQL/Sequelize, Express.js",
-            projectDescription: "A fully CRUD-enabled list making application. Click to learn more.",
+            projectDescription: "A CRUD-enabled list making application with multiple dimensions of customization by users.",
             jsxElement: <Listr/>
         },
         {
             title: "Parkspot",
             projectStack: "Node.js, React.js, PostgreSQL/Sequelize, Express.js",
+            projectDescription: "An application for reserving parking spots from sellers on private or residential property.",
             jsxElement: <Parkspot/>
         },
         {
             title: "The Social App",
             projectStack: "Node.js, React.js, PostgreSQL/Sequelize, Express.js",
+            projectDescription: "A small-scale, functional blog application created by two other developers and myself.", 
             jsxElement: <TheSocialApp/>
         },
         {
             title: "Marshes' Melons",
             projectStack: "Node.js, jQuery, Phaser.js, Express.js, MongoDB",
+            projectDescription: "A basic platformer game created with vanilla JavaScript, jQuery, and the Phaser.js engine.", 
             jsxElement: <MarshesMelons/>
         },
     ]
@@ -43,14 +46,18 @@ const ProjectsContent = ()=>{
     const renderProjectList = ()=>{
         let mapProduct = projectList.map((element, index)=>{
             return(
-                <div className='project-thumbnail' key={index} style={{
+                <motion.div className='project-thumbnail' key={index} style={{
                     width: `${100 / projectList.length - 6}%`
                 }}
-                onClick={()=>{setClickExpandIndex(index)}}>
-                    <h3>{element.title}</h3>
-                    <h5>Tech Stack: {element.projectStack}</h5>
+                onClick={()=>{setClickExpandIndex(index)}}
+                whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.9}}
+                >
+                    <h2>{element.title}</h2>
+                    <h4>Tech Stack:<br/>{element.projectStack}</h4>
+                    <hr id='thumbnail-hr'/>
                     <p className='project-thumbnail-description'>{element.projectDescription}</p>
-                </div>
+                </motion.div>
             )
         })
         return mapProduct

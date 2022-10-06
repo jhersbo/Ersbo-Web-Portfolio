@@ -54,7 +54,7 @@ const ContactMe = ()=>{
                 stiffness: 40,
                 restDelta: 0.001
             }}>
-                <div className='content-container'>
+                <div className='expanded-container'>
                     <button 
                     onClick={()=>{setExpand(!expand); setClicked(false)}}
                     className='close-button' 

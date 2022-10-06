@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Reem+Kufi+Ink&display=swap');
 $nameFont: 'Reem Kufi Ink', sans-serif;
 $msgFont: 'Kanit', sans-serif;
+$ivory: #FFFDED;
+$gunmetal: #242F40;
 
 #projects-header{
     color: white;
@@ -30,6 +32,7 @@ $msgFont: 'Kanit', sans-serif;
     border-radius: 15px;
     box-shadow: 1px 1px 10px black;
     padding: 0.5em;
+    font-family: $nameFont;
 }
 
 #project-expanded-container{
@@ -42,4 +45,8 @@ $msgFont: 'Kanit', sans-serif;
     top: 0;
     background-color: transparent;
     border: none;
+}
+
+#thumbnail-hr{
+    color: $gunmetal;
 }
