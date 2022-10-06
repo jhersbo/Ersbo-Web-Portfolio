@@ -6,6 +6,7 @@ import { useFollowPointer } from "../Custom_Hooks/useFollowPointer";
 
 import ContactMeContent from "./micro-components/ContactMeContent";
 import CloseIcon from '@mui/icons-material/Close';
+import OpenInFullRoundedIcon from '@mui/icons-material/OpenInFullRounded';
 
 const ContactMe = ()=>{
     const [clicked, setClicked] = useState(false)
@@ -38,7 +39,11 @@ const ContactMe = ()=>{
             onClick={()=>{handleClick()}}
             >
                 <h3>Get in touch</h3>
-                <button className='expand' onClick={()=>{setExpand(!expand)}}>Expand</button>
+                <button 
+                className='expand' 
+                onClick={()=>{setExpand(!expand)}}>
+                    <OpenInFullRoundedIcon sx={{color: "white", fontSize: "30px"}}/>
+                </button>
             </motion.div>
         )
     }else{
@@ -47,6 +52,7 @@ const ContactMe = ()=>{
             ref={ref}
             className="expanded-box"
             animate={{x: "0vw", y: "16vh", height: "fit-content", width: "75vw"}}
+            whileHover={{scale: 1.01}}
             style={{height: "fit-content",}}
             transition={{
                 type: "spring",

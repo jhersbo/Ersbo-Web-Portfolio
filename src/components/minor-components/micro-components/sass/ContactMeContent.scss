@@ -17,6 +17,7 @@ $gunmetal: #242F40;
 
 #download-container{
     display: flex;
+    align-items: center;
 }
 
 #contact-content{
@@ -24,10 +25,37 @@ $gunmetal: #242F40;
     justify-content: space-around;
 }
 
+#contact-info-container{
+    background-color: white;
+    width: 60%;
+    padding: 0em 1em;
+    border-radius: 15px;
+    box-shadow: 1px 1px 15px black;
+}
+
+.contact-list-item{
+    display: flex;
+    align-items: center;
+}
+
+#contact-list-link{
+    cursor: pointer;
+}
+
 #resume-download-btn{
     cursor: pointer;
-    background-color: white;
+    color: white;
+    background-color: $gunmetal;
     border: none;
-    font-family: $msgFont;
+    font-family: $nameFont;
+    font-size: 18px;
+    height: fit-content;
+    padding: 0.5em;
+    border-radius: 10px;
+    border: 2px solid white;
     box-shadow: 1px 1px 10px black;
+}
+
+#resume-download-btn:hover{
+    box-shadow: inset 1px 1px 25px black;
 }
