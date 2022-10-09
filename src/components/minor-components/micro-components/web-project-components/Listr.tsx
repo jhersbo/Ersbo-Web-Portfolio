@@ -33,7 +33,7 @@ const Listr = ()=>{
             justifyContent: "space-around"
         },
         image: {
-            width: "25%",
+            width: "20%",
             height: "fit-content",
         }
     }
