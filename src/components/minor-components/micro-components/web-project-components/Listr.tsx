@@ -40,15 +40,18 @@ const Listr = ()=>{
 
     return(
         <div>
-            <h1>Listr</h1>
             {!isLoading ? 
-                <div style={styles.container}>
-                    <img style={styles.image} src={process.env.PUBLIC_URL + "/images/project_screenshots/Listr/Home.jpg"} alt="Screenshot of Listr's home screen."/>
-                    <img style={styles.image} src={process.env.PUBLIC_URL + "/images/project_screenshots/Listr/List.jpg"} alt="Screenshot of Listr's list screen."/>
-                    <img style={styles.image} src={process.env.PUBLIC_URL + "/images/project_screenshots/Listr/Account.jpg"} alt="Screenshot of Listr's account screen."/>
+                <div>
+                    <h1>Listr</h1>
+                    <div style={styles.container}>
+                        <img style={styles.image} src={process.env.PUBLIC_URL + "/images/project_screenshots/Listr/Home.jpg"} alt="Screenshot of Listr's home screen."/>
+                        <img style={styles.image} src={process.env.PUBLIC_URL + "/images/project_screenshots/Listr/List.jpg"} alt="Screenshot of Listr's list screen."/>
+                        <img style={styles.image} src={process.env.PUBLIC_URL + "/images/project_screenshots/Listr/Account.jpg"} alt="Screenshot of Listr's account screen."/>
+                    </div>
                 </div>
             :
                 <div style={styles.container}>
+                    <h1>Listr</h1>
                     <HourglassBottomIcon/>
                 </div>
             }
