@@ -52,7 +52,6 @@ const ContactMe = ()=>{
             ref={ref}
             className="expanded-box"
             animate={{x: "5vw", y: "16vh", height: "fit-content", width: "75vw"}}
-            whileHover={{scale: 1.01}}
             style={{height: "fit-content",}}
             transition={{
                 type: "spring",

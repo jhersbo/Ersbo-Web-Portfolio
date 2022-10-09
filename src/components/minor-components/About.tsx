@@ -50,7 +50,6 @@ const About = ()=>{
             className="expanded-box"
             animate={{x: "5vw", y: "12vh",  width: "75vw"}}
             style={{height: "fit-content",}}
-            whileHover={{scale: 1.01}}
             transition={{
                 type: "spring",
                 damping: 15,
