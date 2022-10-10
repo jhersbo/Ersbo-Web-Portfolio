@@ -39,13 +39,16 @@ $gunmetal: #242F40;
 #project-expanded-container{
     display: flex;
     background-color: white;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    padding: 0.5em;
 }
 
 #arrow-back{
     cursor: pointer;
     top: 0%;
     height: 20%;
-    margin: 0.67em 0em 0.67em 0em;
+    margin: 0.33em 0em 0.67em 0em;
     padding: none;
     background-color: transparent;
     border: none;

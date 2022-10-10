@@ -28,30 +28,44 @@ const Listr = ()=>{
     }, [])
 
     const styles = {
-        container:{
+        img_container:{
             display: "flex",
-            justifyContent: "space-around"
+            justifyContent: "flex-end",
+            alignItems: "center"
+        },
+        inner_container: {
+            display: "flex"
+        },
+        outer_container: {
+            padding: "none"
         },
         image: {
             width: "20%",
             height: "fit-content",
+            margin: "0em 0.5em"
+        },
+        h1: {
+            width: "20%",
+            margin: "0em 0em 0em 0.5em"
         }
     }
 
     return(
-        <div>
+        <div style={styles.outer_container} className="exp-project-outer-container">
             {!isLoading ? 
-                <div>
-                    <h1>Listr</h1>
-                    <div style={styles.container}>
+                <div style={styles.inner_container}>
+                    <div>
+                        <h1 style={styles.h1}>Listr</h1>
+                    </div>
+                    <div style={styles.img_container}>
                         <img style={styles.image} src={process.env.PUBLIC_URL + "/images/project_screenshots/Listr/Home.jpg"} alt="Screenshot of Listr's home screen."/>
                         <img style={styles.image} src={process.env.PUBLIC_URL + "/images/project_screenshots/Listr/List.jpg"} alt="Screenshot of Listr's list screen."/>
                         <img style={styles.image} src={process.env.PUBLIC_URL + "/images/project_screenshots/Listr/Account.jpg"} alt="Screenshot of Listr's account screen."/>
                     </div>
                 </div>
             :
-                <div style={styles.container}>
-                    <h1>Listr</h1>
+                <div style={styles.img_container}>
+                    <h1 style={styles.h1}>Listr</h1>
                     <HourglassBottomIcon/>
                 </div>
             }
