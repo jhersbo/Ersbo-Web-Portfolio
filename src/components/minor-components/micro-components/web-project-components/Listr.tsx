@@ -97,9 +97,13 @@ const Listr = ()=>{
                         </p>
                     </div>
                     <div style={styles.img_container}>
-                        <motion.img style={styles.image} src={process.env.PUBLIC_URL + "/images/project_screenshots/Listr/Home.jpg"} alt="Screenshot of Listr's home screen." whileHover={{scale: 1.3}}/>
-                        <motion.img style={styles.image} src={process.env.PUBLIC_URL + "/images/project_screenshots/Listr/List.jpg"} alt="Screenshot of Listr's list screen." whileHover={{scale: 1.3}}/>
-                        <motion.img style={styles.image} src={process.env.PUBLIC_URL + "/images/project_screenshots/Listr/Account.jpg"} alt="Screenshot of Listr's account screen." whileHover={{scale: 1.3}}/>
+                        {
+                            imgs.map((element, index)=>{
+                                return(
+                                    <motion.img style={styles.image} src={element} key={index} whileHover={{scale: 1.3}}/>
+                                )
+                            })
+                        }
                     </div>
                 </div>
             :
