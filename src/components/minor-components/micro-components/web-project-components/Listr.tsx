@@ -37,6 +37,9 @@ const Listr = ()=>{
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+    const openInNewTab = (url: string): void=>{
+        window.open(url, '_blank', "noopener,noreferrer")
+    }
 
     //have to use inline styling because of the conditional rendering below. I think regular css files would be ok too.
     const styles = {
@@ -48,6 +51,7 @@ const Listr = ()=>{
             padding: "1em",
             boxShadow: "inset 1px 1px 50px black",
             borderRadius: "15px",
+            border: "5px solid #242F40",
             backgroundColor: "inherit"
         },
         inner_container: {
@@ -72,6 +76,18 @@ const Listr = ()=>{
             margin: "0em 0em 0em 0.5em",
             fontFamily: 'Reem Kufi Ink'
         },
+        btn: {
+            cursor: "pointer",
+            height: "auto",
+            color: "#EDEFFF",
+            backgroundColor: "#242F40",
+            border: "3px inset #EDEFFF",
+            borderRadius: "10px",
+            boxShadow: "2px 2px 10px black",
+            fontFamily: "Reem Kufi Ink",
+            fontSize: "24px",
+            fontWeight: 500
+        },
         gen: {
             margin: "3% 0%",
             fontFamily: "Reem Kufi Ink"
@@ -83,9 +99,22 @@ const Listr = ()=>{
             {!isLoading ? 
                 <div style={styles.inner_container}>
                     <div style={styles.desc_container}>
-                        <h1 style={styles.h1}>Listr</h1>
+                        <div style={{
+                            display: "flex",
+                            justifyContent: "space-between"
+                        }}>
+                            <h1 style={styles.h1}>Listr</h1>
+                            <motion.button 
+                            onClick={()=>{
+                                openInNewTab("https://listr-ersbo.herokuapp.com/")}
+                            }
+                            whileHover={{scale: 1.1}} 
+                            style={styles.btn} 
+                            aria-label="Visit the app."
+                            >Click to Visit!</motion.button>
+                        </div>
                         <h3 style={styles.gen}>Node.js, React.js, PostgreSQL/Sequelize, Express.js</h3>
-                        <h5 style={styles.gen}>Mobile-only</h5>
+                        <h4 style={styles.gen}>Mobile-only (view in dev tools for best experience)</h4>
                         <hr/>
                         <p style={styles.gen}>
                             Listr is a list-making application that allows users to create, view, update, and delete various elements of a list. It has user authentication which allow users to view their lists across any device. 
@@ -101,7 +130,7 @@ const Listr = ()=>{
                         {
                             imgs.map((element, index)=>{
                                 return(
-                                    <motion.img style={styles.image} src={element} key={index} whileHover={{scale: 1.3}}/>
+                                    <motion.img style={styles.image} src={element} key={index} whileHover={{scale: 1.1}}/>
                                 )
                             })
                         }
