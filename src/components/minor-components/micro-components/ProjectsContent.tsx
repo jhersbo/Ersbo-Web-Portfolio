@@ -54,7 +54,7 @@ const ProjectsContent = ()=>{
                 whileTap={{scale: 0.9}}
                 >
                     <h2>{element.title}</h2>
-                    <h4>Tech Stack:<br/>{element.projectStack}</h4>
+                    <h4>{element.projectStack}</h4>
                     <hr id='thumbnail-hr'/>
                     <p className='project-thumbnail-description'>{element.projectDescription}</p>
                 </motion.div>
@@ -75,7 +75,7 @@ const ProjectsContent = ()=>{
                     </div>
                 :
                     <div id='project-expanded-container'>
-                        <button id='arrow-back' onClick={()=>{setClickExpandIndex(-1)}}>
+                        <button id='arrow-back' onClick={()=>{setClickExpandIndex(-1)}} aria-label='Back'>
                             <ArrowBackRoundedIcon sx={{fontSize: "36px"}}/>
                         </button>
                         <div id='project-expanded-content'>

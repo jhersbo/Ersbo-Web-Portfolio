@@ -41,7 +41,9 @@ const ContactMe = ()=>{
                 <h3>Get in touch</h3>
                 <button 
                 className='expand' 
-                onClick={()=>{setExpand(!expand)}}>
+                onClick={()=>{setExpand(!expand)}} 
+                aria-label='Expand'
+                >
                     <OpenInFullRoundedIcon sx={{color: "white", fontSize: "30px"}}/>
                 </button>
             </motion.div>
@@ -62,7 +64,8 @@ const ContactMe = ()=>{
                 <div className='expanded-container'>
                     <button 
                     onClick={()=>{setExpand(!expand); setClicked(false)}}
-                    className='close-button' 
+                    className='close-button'
+                    aria-label='Close' 
                     >
                         <CloseIcon sx={{fontSize: "36px", color: "white"}}/>
                     </button>

@@ -39,7 +39,7 @@ const Projects = ()=>{
             onClick={()=>{handleClick()}}
             >
                 <h3>My Projects</h3>
-                <button className='expand' onClick={()=>{setExpand(!expand)}}>
+                <button className='expand' onClick={()=>{setExpand(!expand)}} aria-label='Expand'>
                     <OpenInFullRoundedIcon sx={{color: "white", fontSize: "30px"}}/>
                 </button>
             </motion.div>
@@ -60,7 +60,7 @@ const Projects = ()=>{
                 <div className='expanded-container'>
                     <button 
                     onClick={()=>{setExpand(!expand); setClicked(false)}}
-                    className='close-button' 
+                    className='close-button' aria-label='Close'
                     >
                         <CloseIcon sx={{fontSize: "36px", color: "white"}}/>
                     </button>

@@ -34,6 +34,7 @@ const Listr = ()=>{
                 families: ['Reem Kufi Ink']
             }
         })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 
