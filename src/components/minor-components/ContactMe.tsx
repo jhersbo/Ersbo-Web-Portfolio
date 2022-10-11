@@ -53,7 +53,7 @@ const ContactMe = ()=>{
             <motion.div
             ref={ref}
             className="expanded-box"
-            animate={{x: "5vw", y: "16vh", height: "fit-content", width: "75vw"}}
+            animate={{x: "1.5vw", y: "16vh", height: "fit-content", width: "87vw"}}
             style={{height: "fit-content",}}
             transition={{
                 type: "spring",

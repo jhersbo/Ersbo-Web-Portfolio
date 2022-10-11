@@ -45,7 +45,7 @@ const Listr = ()=>{
     const styles = {
         img_container:{
             display: "flex",
-            width: "50%",
+            width: "55%",
             justifyContent: "flex-end",
             alignItems: "center",
             padding: "1em",
