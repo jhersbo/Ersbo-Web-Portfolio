@@ -43,12 +43,12 @@ const Parkspot = ()=>{
         window.open(url, '_blank', "noopener,noreferrer")
     }
     
-    const styles = {
+    const styles: any = {
         img_container:{
             display: "flex",
             width: "55%",
-            justifyContent: "flex-end",
-            alignItems: "center",
+            flexWrap: "wrap",
+            justifyContent: "center",
             padding: "1em",
             boxShadow: "inset 1px 1px 50px black",
             borderRadius: "15px",
@@ -66,9 +66,9 @@ const Parkspot = ()=>{
             width: "40%"
         },
         image: {
-            width: "32%",
+            width: "45%",
             height: "fit-content",
-            margin: "0em 0.25em",
+            margin: "0.25em 0.5em",
             borderRadius: "10px",
             boxShadow: "1px 1px 15px black",
         },
@@ -131,7 +131,7 @@ const Parkspot = ()=>{
                         {
                             imgs.map((element, index)=>{
                                 return(
-                                    <motion.img style={styles.image} src={element} key={index} alt="View of Parkspot" whileHover={{scale: 1.1}}/>
+                                    <motion.img style={styles.image} src={element} key={index} alt="View of Parkspot" whileHover={{scale: 1.5}}/>
                                 )
                             })
                         }
