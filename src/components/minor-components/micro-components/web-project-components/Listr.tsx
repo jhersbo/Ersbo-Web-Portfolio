@@ -90,7 +90,8 @@ const Listr = ()=>{
         },
         gen: {
             margin: "3% 0%",
-            fontFamily: "Reem Kufi Ink"
+            fontFamily: "Reem Kufi Ink",
+            fontSize: '20px'
         }
     }
 
