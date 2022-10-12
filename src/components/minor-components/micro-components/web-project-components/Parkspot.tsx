@@ -115,7 +115,12 @@ const Parkspot = ()=>{
                             aria-label="Visit the app."
                             >Click to Visit!</motion.button>
                         </div>
-                        <h3 style={styles.gen}>Node.js, React.js, PostgreSQL/Sequelize, Express.js</h3>
+                        <h3 style={styles.gen}>
+                            Node.js, React.js, PostgreSQL/Sequelize, Express.js
+                        </h3>
+                        <h4 style={styles.gen}>
+                            Mobile & Desktop!
+                        </h4>
                         <hr/>
                         <p style={styles.gen}>
                             
