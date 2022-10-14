@@ -5,24 +5,12 @@ import { motion } from 'framer-motion'
 import useCache from "../Custom_Hooks/useCache"
 
 import HourglassBottomIcon from "@mui/icons-material/HourglassBottom"
-
-const initialState: {index: any} = {index: 0};
-
-const reducer = (state: any, action: any) => {
-    switch(action.type){
-        case 'increment':
-            return {index: state.index + 1}
-        case 'decrement':
-            return {index: state.index - 1}
-        default: 
-            throw new Error()
-    }
-}
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const Parkspot = ()=>{
     
     const [isLoading, setIsLoading] = useState(true)
-    const [state, dispatch] = useReducer(reducer, initialState)
 
     const imgs = [
         `${process.env.PUBLIC_URL}/images/project_screenshots/Parkspot/main-page.jpg`,
@@ -30,6 +18,29 @@ const Parkspot = ()=>{
         `${process.env.PUBLIC_URL}/images/project_screenshots/Parkspot/login-page.jpg`,
         `${process.env.PUBLIC_URL}/images/project_screenshots/Parkspot/list-page.jpg`,
     ]
+    //initial image state
+    const initialState: {index: any} = {index: 0};
+    //reducer logic for incrementation
+    const reducer = (state: any, action: any) => {
+        switch(action.type){
+            case 'increment':
+                if(state.index === imgs.length - 1){
+                    return {index: 0}
+                }else{
+                    return {index: state.index + 1}
+                }
+            case 'decrement':
+                if(state.index === 0){
+                    return {index: 3}
+                }else{
+                    return {index: state.index - 1}
+                }
+            default: 
+                throw new Error()
+            }
+    }
+
+    const [state, dispatch] = useReducer(reducer, initialState)
 
     useEffect(()=>{
         // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -37,7 +48,7 @@ const Parkspot = ()=>{
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    const openInNewTab = (url: string): void=>{
+    const openInNewTab = (url: string): void => {
         window.open(url, '_blank', "noopener,noreferrer")
     }
     
@@ -47,7 +58,7 @@ const Parkspot = ()=>{
             width: "55%",
             flexWrap: "wrap",
             justifyContent: "center",
-            padding: "1em",
+            padding: "0.5em",
             boxShadow: "inset 1px 1px 50px black",
             borderRadius: "15px",
             border: "5px solid #242F40",
@@ -87,10 +98,20 @@ const Parkspot = ()=>{
             fontSize: "24px",
             fontWeight: 500
         },
+        switchBtn:{
+            cursor: "pointer",
+            backgroundColor: "transparent",
+            border: "none",
+            padding: "0em"
+        },
         gen: {
             margin: "3% 0%",
             fontFamily: "Reem Kufi Ink",
             fontSize: '20px'
+        },
+        icon: {
+            margin: "0px",
+            fontSize: "32px"
         }
     }
 
@@ -131,13 +152,14 @@ const Parkspot = ()=>{
                         </p>
                     </div>
                     <div style={styles.img_container}>
-                        {
-                            imgs.map((element, index)=>{
-                                return(
-                                    <motion.img style={styles.image} src={element} key={index} alt="View of Parkspot" whileHover={{scale: 1.5}}/>
-                                )
-                            })
-                        }
+                        {/* add arrow icons */}
+                        <motion.button onClick={() => dispatch({type: 'decrement'})} style={styles.switchBtn} whileHover={{scale: 1.1}}>
+                            <ArrowBackIosIcon sx={styles.icon}/>
+                        </motion.button>
+                            <img style={styles.image} src={imgs[state.index]} alt="View of Parkspot"/>
+                        <motion.button onClick={() => dispatch({type: 'increment'})} style={styles.switchBtn} whileHover={{scale: 1.1}}>
+                            <ArrowForwardIosIcon sx={styles.icon}/>
+                        </motion.button>
                     </div>
                 </div>
             :
