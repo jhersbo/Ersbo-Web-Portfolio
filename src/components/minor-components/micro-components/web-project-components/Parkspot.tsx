@@ -5,8 +5,8 @@ import { motion } from 'framer-motion'
 import useCache from "../Custom_Hooks/useCache"
 
 import HourglassBottomIcon from "@mui/icons-material/HourglassBottom"
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const Parkspot = ()=>{
     
@@ -56,9 +56,10 @@ const Parkspot = ()=>{
         img_container:{
             display: "flex",
             width: "55%",
-            flexWrap: "wrap",
+            flexWrap: "nowrap",
             justifyContent: "center",
-            padding: "0.5em",
+            alignItems: "center",
+            padding: "1em",
             boxShadow: "inset 1px 1px 50px black",
             borderRadius: "15px",
             border: "5px solid #242F40",
@@ -77,7 +78,7 @@ const Parkspot = ()=>{
         image: {
             width: "90%",
             height: "fit-content",
-            margin: "0.25em 0.5em",
+            margin: "0em",
             borderRadius: "10px",
             boxShadow: "1px 1px 15px black",
         },
@@ -102,7 +103,9 @@ const Parkspot = ()=>{
             cursor: "pointer",
             backgroundColor: "transparent",
             border: "none",
-            padding: "0em"
+            height: "fit-content",
+            padding: "0em",
+            margin: "0em"
         },
         gen: {
             margin: "3% 0%",
@@ -111,7 +114,8 @@ const Parkspot = ()=>{
         },
         icon: {
             margin: "0px",
-            fontSize: "32px"
+            fontSize: "42px",
+            color: "#242F40"
         }
     }
 
@@ -152,13 +156,12 @@ const Parkspot = ()=>{
                         </p>
                     </div>
                     <div style={styles.img_container}>
-                        {/* add arrow icons */}
-                        <motion.button onClick={() => dispatch({type: 'decrement'})} style={styles.switchBtn} whileHover={{scale: 1.1}}>
-                            <ArrowBackIosIcon sx={styles.icon}/>
+                        <motion.button onClick={() => dispatch({type: 'decrement'})} style={styles.switchBtn} whileHover={{scale: 1.2}} aria-label="previous image">
+                            <ArrowBackIcon sx={styles.icon}/>
                         </motion.button>
                             <img style={styles.image} src={imgs[state.index]} alt="View of Parkspot"/>
-                        <motion.button onClick={() => dispatch({type: 'increment'})} style={styles.switchBtn} whileHover={{scale: 1.1}}>
-                            <ArrowForwardIosIcon sx={styles.icon}/>
+                        <motion.button onClick={() => dispatch({type: 'increment'})} style={styles.switchBtn} whileHover={{scale: 1.2}} aria-label="next image">
+                            <ArrowForwardIcon sx={styles.icon}/>
                         </motion.button>
                     </div>
                 </div>
