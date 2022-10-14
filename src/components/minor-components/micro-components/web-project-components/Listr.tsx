@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { motion } from 'framer-motion'
-import WebFont from 'webfontloader'
+
+import useCache from "../Custom_Hooks/useCache"
 
 import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
 
@@ -15,25 +16,8 @@ const Listr = ()=>{
     ]
 
     useEffect(()=>{
-        const cacheImages = async (srcArr: any)=>{
-            const promises = await srcArr.map((src: string)=>{
-                return new Promise<void>((resolve, reject)=>{
-                    const img: any = new Image()
-                    img.src = src
-                    img.onload = resolve()
-                    img.onerror = reject()
-                })
-            })
-            await Promise.all(promises)
-            setIsLoading(false)
-        }
-        cacheImages(imgs)
-
-        WebFont.load({
-            google: {
-                families: ['Reem Kufi Ink']
-            }
-        })
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        useCache(imgs, setIsLoading, ['Reem Kufi Ink'])
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 

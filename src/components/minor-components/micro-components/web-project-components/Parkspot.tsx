@@ -1,13 +1,28 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useReducer } from "react"
 
-import WebFont from "webfontloader"
 import { motion } from 'framer-motion'
 
+import useCache from "../Custom_Hooks/useCache"
+
 import HourglassBottomIcon from "@mui/icons-material/HourglassBottom"
+
+const initialState: {index: any} = {index: 0};
+
+const reducer = (state: any, action: any) => {
+    switch(action.type){
+        case 'increment':
+            return {index: state.index + 1}
+        case 'decrement':
+            return {index: state.index - 1}
+        default: 
+            throw new Error()
+    }
+}
 
 const Parkspot = ()=>{
     
     const [isLoading, setIsLoading] = useState(true)
+    const [state, dispatch] = useReducer(reducer, initialState)
 
     const imgs = [
         `${process.env.PUBLIC_URL}/images/project_screenshots/Parkspot/main-page.jpg`,
@@ -17,25 +32,8 @@ const Parkspot = ()=>{
     ]
 
     useEffect(()=>{
-        const cacheImages = async (srcArr: any)=>{
-            const promises = await srcArr.map((src: string)=>{
-                return new Promise<void>((resolve, reject)=>{
-                    const img: any = new Image()
-                    img.src = src
-                    img.onload = resolve()
-                    img.onerror = reject()
-                })
-            })
-            await Promise.all(promises)
-            setIsLoading(false)
-        }
-        cacheImages(imgs)
-
-        WebFont.load({
-            google: {
-                families: ['Reem Kufi Ink']
-            }
-        })
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        useCache(imgs, setIsLoading, ['Reem Kufi Ink'])
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
@@ -66,7 +64,7 @@ const Parkspot = ()=>{
             width: "40%"
         },
         image: {
-            width: "45%",
+            width: "90%",
             height: "fit-content",
             margin: "0.25em 0.5em",
             borderRadius: "10px",
