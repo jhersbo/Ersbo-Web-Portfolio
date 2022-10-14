@@ -167,7 +167,7 @@ const Parkspot = ()=>{
                 </div>
             :
                 <div style={styles.img_container}>
-                    <h1 style={styles.h1}>Listr</h1>
+                    <h1 style={styles.h1}>Parkspot</h1>
                     <HourglassBottomIcon/>
                 </div>
             }
