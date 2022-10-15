@@ -146,7 +146,7 @@ const Parkspot = ()=>{
                         </h4>
                         <hr/>
                         <p style={styles.gen}>
-                            
+                            Parkspot is an application that connects buyers and sellers of short-term event parking on the seller's private property. 
                         </p>
                         <p style={styles.gen}>
                             

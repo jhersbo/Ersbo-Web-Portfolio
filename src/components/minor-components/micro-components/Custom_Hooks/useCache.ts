@@ -1,6 +1,6 @@
 import WebFont from "webfontloader"
 
-const useCache = async (srcArr: any, setIsLoading: React.Dispatch<React.SetStateAction<boolean>>, family: string[])=>{
+const useCache = async (srcArr: any, setIsLoading: React.Dispatch<React.SetStateAction<boolean>>, family?: string[])=>{
     const promises = await srcArr.map((src: string)=>{
         return new Promise<void>((resolve, reject)=>{
             const img: any = new Image()
@@ -12,11 +12,14 @@ const useCache = async (srcArr: any, setIsLoading: React.Dispatch<React.SetState
     await Promise.all(promises)
     setIsLoading(false)
 
-    WebFont.load({
-        google: {
-            families: family
-        }
-    })
+    if(family){
+        WebFont.load({
+            google: {
+                families: family
+            }
+        })
+
+    }
 }
 
 export default useCache
