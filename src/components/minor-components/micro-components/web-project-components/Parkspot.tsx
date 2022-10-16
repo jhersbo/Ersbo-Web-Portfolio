@@ -149,10 +149,10 @@ const Parkspot = ()=>{
                             Parkspot is an application that connects buyers and sellers of short-term event parking on the seller's private property. 
                         </p>
                         <p style={styles.gen}>
-                            
+                            It allows users to list and reserve parking spots. It also features user authentication and full CRUD functionality.
                         </p>
                         <p style={styles.gen}>
-                            
+                            <b>Note:</b> This is a concept site and is not an actual service. 
                         </p>
                     </div>
                     <div style={styles.img_container}>
