@@ -14,7 +14,7 @@ const App = ()=>{
 
   useEffect(()=>{
     setThinScreenBool(thinScreen)
-  }, [])
+  }, [thinScreen])
 
   if(page === 'landing'){
     return(
