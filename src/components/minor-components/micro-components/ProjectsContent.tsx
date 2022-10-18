@@ -25,25 +25,25 @@ const ProjectsContent = ({ thinScreenBool }: ProjectsProps)=>{
             alt: "Listr home screen",
             projectStack: "Node.js, React.js, PostgreSQL/Sequelize, Express.js",
             projectDescription: "A CRUD-enabled list making application with multiple dimensions of customization by users.",
-            jsxElement: <GenListr/>
+            jsxElement: <GenListr thinScreenBool={thinScreenBool}/>
         },
         {
             title: "Parkspot",
             projectStack: "Node.js, React.js, PostgreSQL/Sequelize, Express.js",
             projectDescription: "An application for reserving parking spots from sellers on private or residential property.",
-            jsxElement: <GenParkspot/>
+            jsxElement: <GenParkspot thinScreenBool={thinScreenBool}/>
         },
         {
             title: "The Social App",
             projectStack: "Node.js, React.js, PostgreSQL/Sequelize, Express.js",
             projectDescription: "A small-scale, functional blog application created by two other developers and myself.", 
-            jsxElement: <GenSocialApp/>
+            jsxElement: <GenSocialApp thinScreenBool={thinScreenBool}/>
         },
         {
             title: "Marshes' Melons",
             projectStack: "Node.js, jQuery, Phaser.js, Express.js, MongoDB",
             projectDescription: "A basic platformer game created with vanilla JavaScript, jQuery, and the Phaser.js engine.", 
-            jsxElement: <GenMarshesMelons/>
+            jsxElement: <GenMarshesMelons thinScreenBool={thinScreenBool}/>
         },
     ]
 

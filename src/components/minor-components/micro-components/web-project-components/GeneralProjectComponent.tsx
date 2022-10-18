@@ -9,6 +9,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 interface GenProjectComponentProps{
+    thinScreenBool: boolean,
     mobileBool: boolean,
     styles: any,
     imageArr: string[],
@@ -21,7 +22,7 @@ interface GenProjectComponentProps{
     paragraph3: string,
 }
 
-const GeneralProjectComponent = ( { mobileBool, styles, imageArr, title, projectURL, techStack, platforms, paragraph1, paragraph2, paragraph3 }: GenProjectComponentProps )=>{
+const GeneralProjectComponent = ({ thinScreenBool, mobileBool, styles, imageArr, title, projectURL, techStack, platforms, paragraph1, paragraph2, paragraph3 }: GenProjectComponentProps )=>{
     
     const [isLoading, setIsLoading] = useState(true)
 

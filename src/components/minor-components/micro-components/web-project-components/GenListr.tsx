@@ -1,6 +1,10 @@
 import GeneralProjectComponent from "./GeneralProjectComponent"
 
-const GenListr = ()=>{
+interface Props{
+    thinScreenBool: boolean
+}
+
+const GenListr = ({ thinScreenBool }: Props)=>{
 
     const imgs = [
         `${process.env.PUBLIC_URL}/images/project_screenshots/Listr/Home.jpg`,
@@ -68,7 +72,7 @@ const GenListr = ()=>{
     }
 
     return(
-        <GeneralProjectComponent mobileBool={true} styles={styles} imageArr={imgs} title={"Listr"} projectURL={"https://listr-ersbo.herokuapp.com/"} techStack={"Node.js, React.js, PostgreSQL/Sequelize, Express.js"} platforms={"Mobile only. View in dev tools for best experience."} paragraph1={paragraphs[1]} paragraph2={paragraphs[2]} paragraph3={paragraphs[3]}/>
+        <GeneralProjectComponent thinScreenBool={thinScreenBool} mobileBool={true} styles={styles} imageArr={imgs} title={"Listr"} projectURL={"https://listr-ersbo.herokuapp.com/"} techStack={"Node.js, React.js, PostgreSQL/Sequelize, Express.js"} platforms={"Mobile only. View in dev tools for best experience."} paragraph1={paragraphs[1]} paragraph2={paragraphs[2]} paragraph3={paragraphs[3]}/>
     )
 }
 

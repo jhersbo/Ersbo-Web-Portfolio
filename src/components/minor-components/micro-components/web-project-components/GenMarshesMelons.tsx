@@ -1,6 +1,10 @@
 import GeneralProjectComponent from "./GeneralProjectComponent"
 
-const GenMarshesMelons = ()=>{
+interface Props{
+    thinScreenBool: boolean
+}
+
+const GenMarshesMelons = ({ thinScreenBool }: Props)=>{
     
     const imgs = [
         `${process.env.PUBLIC_URL}/images/project_screenshots/Marshes/landing.jpg`,
@@ -82,7 +86,7 @@ const GenMarshesMelons = ()=>{
     }
 
     return(
-        <GeneralProjectComponent mobileBool={false} styles={styles} imageArr={imgs} title={"Marshes' Melons"} projectURL={"https://jhersbo.github.io/marshes-melons/"} techStack={"Node.js, jQuery, Phaser.js, Express.js, MongoDB"} platforms={"Desktop only"} paragraph1={paragraphs[1]} paragraph2={paragraphs[2]} paragraph3={paragraphs[3]}/>
+        <GeneralProjectComponent thinScreenBool={thinScreenBool} mobileBool={false} styles={styles} imageArr={imgs} title={"Marshes' Melons"} projectURL={"https://jhersbo.github.io/marshes-melons/"} techStack={"Node.js, jQuery, Phaser.js, Express.js, MongoDB"} platforms={"Desktop only"} paragraph1={paragraphs[1]} paragraph2={paragraphs[2]} paragraph3={paragraphs[3]}/>
     )
 }
 

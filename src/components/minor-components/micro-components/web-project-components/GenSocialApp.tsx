@@ -1,6 +1,10 @@
 import GeneralProjectComponent from "./GeneralProjectComponent"
 
-const GenSocialApp = ()=>{
+interface Props{
+    thinScreenBool: boolean
+}
+
+const GenSocialApp = ({ thinScreenBool }: Props)=>{
     
     const imgs = [
         `${process.env.PUBLIC_URL}/images/project_screenshots/SocialApp/home.jpg`,
@@ -81,7 +85,7 @@ const GenSocialApp = ()=>{
     }
 
     return(
-        <GeneralProjectComponent mobileBool={false} styles={styles} imageArr={imgs} title={"The Social App"} projectURL={"https://social-app-client.herokuapp.com/"} techStack={"Node.js, React.js, PostgreSQL/Sequelize, Express.js"} platforms={"Desktop only"} paragraph1={paragraphs[1]} paragraph2={paragraphs[2]} paragraph3={paragraphs[3]}/>
+        <GeneralProjectComponent thinScreenBool={thinScreenBool} mobileBool={false} styles={styles} imageArr={imgs} title={"The Social App"} projectURL={"https://social-app-client.herokuapp.com/"} techStack={"Node.js, React.js, PostgreSQL/Sequelize, Express.js"} platforms={"Desktop only"} paragraph1={paragraphs[1]} paragraph2={paragraphs[2]} paragraph3={paragraphs[3]}/>
     )
 }
 
