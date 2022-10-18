@@ -39,7 +39,7 @@ const AboutContent = ({ thinScreenBool }: AboutContentProps)=>{
                         I have experience and am proficient in <b>HTML, CSS, JavaScript/JSX/TypeScript, and Python</b> programming languages and experience with various libraries, such as <b>React, Redux, Express, MongoDB, Flask, and PostgreSQL/Sequelize ORM</b>.
                     </p>
                     <p>
-                        I have deployed applications using Heroku, Netlify, AWS, Kubernetes????
+                        I have deployed applications using Heroku, Netlify, and AWS. I also have experience with Docker and Kubernetes.
                     </p>
                 </div>
             </div>
