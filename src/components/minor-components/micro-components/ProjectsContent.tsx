@@ -1,10 +1,10 @@
 import './sass/ProjectsContent.scss'
 import '../sass/bubbleMenus.scss'
 
-import Listr from './web-project-components/Listr'
-import Parkspot from './web-project-components/Parkspot'
-import MarshesMelons from './web-project-components/MarshesMelons'
-import TheSocialApp from './web-project-components/TheSocialApp'
+import GenParkspot from './web-project-components/GenParkspot'
+import GenListr from './web-project-components/GenListr'
+import GenMarshesMelons from './web-project-components/GenMarshesMelons'
+import GenSocialApp from './web-project-components/GenSocialApp'
 
 import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 import { motion } from "framer-motion"
@@ -21,25 +21,25 @@ const ProjectsContent = ()=>{
             alt: "Listr home screen",
             projectStack: "Node.js, React.js, PostgreSQL/Sequelize, Express.js",
             projectDescription: "A CRUD-enabled list making application with multiple dimensions of customization by users.",
-            jsxElement: <Listr/>
+            jsxElement: <GenListr/>
         },
         {
             title: "Parkspot",
             projectStack: "Node.js, React.js, PostgreSQL/Sequelize, Express.js",
             projectDescription: "An application for reserving parking spots from sellers on private or residential property.",
-            jsxElement: <Parkspot/>
+            jsxElement: <GenParkspot/>
         },
         {
             title: "The Social App",
             projectStack: "Node.js, React.js, PostgreSQL/Sequelize, Express.js",
             projectDescription: "A small-scale, functional blog application created by two other developers and myself.", 
-            jsxElement: <TheSocialApp/>
+            jsxElement: <GenSocialApp/>
         },
         {
             title: "Marshes' Melons",
             projectStack: "Node.js, jQuery, Phaser.js, Express.js, MongoDB",
             projectDescription: "A basic platformer game created with vanilla JavaScript, jQuery, and the Phaser.js engine.", 
-            jsxElement: <MarshesMelons/>
+            jsxElement: <GenMarshesMelons/>
         },
     ]
 
