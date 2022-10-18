@@ -16,6 +16,7 @@ const AboutContent = ({ thinScreenBool }: AboutContentProps)=>{
     useEffect(()=>{
         // eslint-disable-next-line react-hooks/rules-of-hooks
         useCache(imgs, setIsLoading)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
