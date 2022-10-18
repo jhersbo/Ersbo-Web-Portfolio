@@ -10,7 +10,11 @@ import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 import { motion } from "framer-motion"
 import { useState } from "react"
 
-const ProjectsContent = ()=>{
+interface ProjectsProps{
+    thinScreenBool: boolean
+}
+
+const ProjectsContent = ({ thinScreenBool }: ProjectsProps)=>{
     // -1 is the thumbnail state
     const [clickExpandIndex, setClickExpandIndex] = useState(-1)
 

@@ -4,7 +4,11 @@ import '../sass/bubbleMenus.scss'
 import EmailIcon from '@mui/icons-material/Email';
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 
-const ContactMeContent = ()=>{
+interface ContactMeProps{
+    thinScreenBool: boolean
+}
+
+const ContactMeContent = ({ thinScreenBool }: ContactMeProps)=>{
 
     const handleDownloadClick = ()=>{
         fetch(`${process.env.PUBLIC_URL}/Portfolio-materials/Resume_mk2.pdf`)

@@ -1,9 +1,13 @@
 import GeneralBubbleComponent from "./GeneralBubbleComponent"
 import ContactMeContent from "./micro-components/ContactMeContent"
 
-const GenContactMe = ()=>{
+interface ContactMeProps{
+    thinScreenBool: boolean
+}
+
+const GenContactMe = ({ thinScreenBool }: ContactMeProps)=>{
     return(
-        <GeneralBubbleComponent startingCoords={{x: 0, y: 600}} title={"Get in touch"} expandedY={"16vh"} internalJSX={<ContactMeContent/>}/>
+        <GeneralBubbleComponent thinScreenBool={thinScreenBool} startingCoords={{x: 0, y: 600}} title={"Get in touch"} expandedY={"16vh"} internalJSX={<ContactMeContent thinScreenBool={thinScreenBool}/>}/>
     )
 }
 

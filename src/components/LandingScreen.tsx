@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import '../sass/landingScreen.scss'
 
 interface LandingScreenProps{
-    viewChange: any,
+    setPage: React.Dispatch<React.SetStateAction<string>>,
     thinScreenBool: boolean
 }
 
-const LandingScreen = ({ viewChange, thinScreenBool }: LandingScreenProps)=>{
+const LandingScreen = ({ setPage, thinScreenBool }: LandingScreenProps)=>{
     const [clicked, setClicked] = useState(false)
 
     const variantsLeft = {
@@ -23,35 +23,54 @@ const LandingScreen = ({ viewChange, thinScreenBool }: LandingScreenProps)=>{
         clicked: {x: '0%', y: "500%"},
         unclicked: {x:0, y: 0}
     }
+
+    //lil timer function
+    function wait(ms:number){
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    const setView = (page: string)=>{
+        wait(150).then(()=>{
+            setPage(page)
+        })
+    }
     
-    return(
-        <div onClick={()=>{setClicked(true)}} onMouseUp={()=>{viewChange('home')}}>
-            <header id="top-landing-panels">
-                <motion.div id="landing-name-div" className="top-landing-panels" 
+    if(!thinScreenBool){
+        return(
+            <div onClick={()=>{setClicked(true)}} onMouseUp={()=>{setView('home')}}>
+                <header id="top-landing-panels">
+                    <motion.div id="landing-name-div" className="top-landing-panels" 
+                    animate={clicked ? "clicked" : "unclicked"} 
+                    variants={variantsLeft}
+                    transition={{ type: "spring", stiffness: 100 }}>
+                        <motion.h1 id="landing-name"
+                        whileHover={{scale: 1.1,}}
+                        transition={{ type: "spring", stiffness: 400, damping: 8}}>Jack<br></br>Ersbo</motion.h1>
+                    </motion.div>
+                    <motion.div id="landing-role-div" className="top-landing-panels"
+                    animate={clicked ? "clicked" : "unclicked"} 
+                    variants={variantsRight}
+                    transition={{ type: "spring", stiffness: 100 }}>
+                        <motion.h1 id="landing-role"
+                        whileHover={{scale: 1.1,}}
+                        transition={{ type: "spring", stiffness: 400, damping: 8 }}>Full-Stack Software Developer</motion.h1>
+                    </motion.div>
+                </header>
+                <motion.footer id="landing-footer" className="bottom-landing-panel"
                 animate={clicked ? "clicked" : "unclicked"} 
-                variants={variantsLeft}
+                variants={variantsBottom}
                 transition={{ type: "spring", stiffness: 100 }}>
-                    <motion.h1 id="landing-name"
-                    whileHover={{scale: 1.1,}}
-                    transition={{ type: "spring", stiffness: 400, damping: 8}}>Jack<br></br>Ersbo</motion.h1>
-                </motion.div>
-                <motion.div id="landing-role-div" className="top-landing-panels"
-                animate={clicked ? "clicked" : "unclicked"} 
-                variants={variantsRight}
-                transition={{ type: "spring", stiffness: 100 }}>
-                    <motion.h1 id="landing-role"
-                    whileHover={{scale: 1.1,}}
-                    transition={{ type: "spring", stiffness: 400, damping: 8 }}>Full-Stack Software Developer</motion.h1>
-                </motion.div>
-            </header>
-            <motion.footer id="landing-footer" className="bottom-landing-panel"
-            animate={clicked ? "clicked" : "unclicked"} 
-            variants={variantsBottom}
-            transition={{ type: "spring", stiffness: 100 }}>
-                <h2>Thank you for checking out my site!</h2>
-                <h4 id="landing-click-prompt">*Click anywhere to continue*</h4>
-            </motion.footer>
-        </div>
-    )
+                    <h2>Thank you for checking out my site!</h2>
+                    <h4 id="landing-click-prompt">*Click anywhere to continue*</h4>
+                </motion.footer>
+            </div>
+        )
+    }else{
+        return(
+            <div>
+                <h1>ThinScreen</h1>
+            </div>
+        )
+    }
 }
 export default LandingScreen

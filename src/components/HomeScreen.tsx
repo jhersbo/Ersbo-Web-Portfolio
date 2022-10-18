@@ -12,10 +12,10 @@ const HomeScreen = ({ thinScreenBool }: HomeScreenProps)=>{
     
     return(
         <div id="container">
-            <HomeScreenNav/>
-            <GenAbout/>
-            <GenProjects/>
-            <GenContactMe/>
+            <HomeScreenNav thinScreenBool={thinScreenBool}/>
+            <GenAbout thinScreenBool={thinScreenBool}/>
+            <GenProjects thinScreenBool={thinScreenBool}/>
+            <GenContactMe thinScreenBool={thinScreenBool}/>
         </div>
     )
 }

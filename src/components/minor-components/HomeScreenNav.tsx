@@ -4,7 +4,11 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 import { motion } from 'framer-motion'
 
-const HomeScreenNav = ()=>{
+interface HomeScreenNavProps{
+    thinScreenBool: boolean
+}
+
+const HomeScreenNav = ({ thinScreenBool }: HomeScreenNavProps)=>{
 
     const linkArr = [
         {

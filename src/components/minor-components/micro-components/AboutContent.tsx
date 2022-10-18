@@ -5,7 +5,11 @@ import { useEffect, useState } from 'react'
 
 import useCache from './Custom_Hooks/useCache'
 
-const AboutContent = ()=>{
+interface AboutContentProps{
+    thinScreenBool: boolean
+}
+
+const AboutContent = ({ thinScreenBool }: AboutContentProps)=>{
     const imgs = [`${process.env.PUBLIC_URL}/images/me&millie.jpg`]
     const [isLoading, setIsLoading] = useState(true)
 

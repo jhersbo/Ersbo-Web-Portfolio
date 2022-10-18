@@ -8,13 +8,14 @@ import CloseIcon from '@mui/icons-material/Close';
 import OpenInFullRoundedIcon from '@mui/icons-material/OpenInFullRounded';
 
 interface GenBubbleProps{
+    thinScreenBool: boolean,
     startingCoords: {x: number, y: number},
     title: string, 
     expandedY: string, 
     internalJSX: JSX.Element
 }
 
-const GeneralBubbleComponent = ({ startingCoords, title, expandedY, internalJSX }: GenBubbleProps)=>{
+const GeneralBubbleComponent = ({ thinScreenBool, startingCoords, title, expandedY, internalJSX }: GenBubbleProps)=>{
     const [clicked, setClicked] = useState(false)
     const [expand, setExpand] = useState(false)
     
