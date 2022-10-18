@@ -42,14 +42,11 @@ const HomeScreenNav = ()=>{
     }
 
     return(
-        <div id='homescreen-nav'>
-            {/* <div>
-                <h1>JackErsbo.com</h1>
-            </div> */}
+        <nav id='homescreen-nav'>
             <ul style={{listStyleType: "none"}}>
                 {renderNav()}
             </ul>
-        </div>
+        </nav>
     )
 }
 
