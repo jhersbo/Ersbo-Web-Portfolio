@@ -43,7 +43,8 @@ const GeneralBubbleComponent = ({ startingCoords, title, expandedY, internalJSX 
                 restDelta: 0.001
             }}
             onClick={()=>{handleClick()}}>
-                <h3>{title}</h3>
+                <h3 style={{margin: "1em, 0em"}}>{title}</h3>
+                <h5 style={{margin: "0em", fontWeight: 200}}>*Click Me*</h5>
                 <button className='expand' onClick={()=>{setExpand(!expand)}} aria-label='Expand'>
                     <OpenInFullRoundedIcon sx={{color: "white", fontSize: "30px"}}/>
                 </button>
