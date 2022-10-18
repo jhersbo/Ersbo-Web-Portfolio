@@ -75,8 +75,8 @@ const GenSocialApp = ()=>{
     }
 
     const paragraphs = {
-        1: "",
-        2: "",
+        1: "This is a small social networking blog created by two other developers and myself. I built the backend. We worked to incorporate Agile methodologies in our workflow.",
+        2: "The app features user authentication, full CRUD functionality, and the ability to send friend requests and filter posts based on the user's friends.",
         3: ""
     }
 

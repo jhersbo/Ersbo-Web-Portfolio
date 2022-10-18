@@ -12,7 +12,7 @@ const GenParkspot = ()=>{
     const paragraphs = {
         1: "Parkspot is an application that connects buyers and sellers of short-term event parking on the seller's private property.",
         2: "It allows users to list and reserve parking spots. It also features user authentication and full CRUD functionality.",
-        3: "<b>Note:</b> This is a concept site and is not an actual service."
+        3: "Note: This is a concept site and is not an actual service."
     }
 
     const styles: any = {

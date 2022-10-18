@@ -76,8 +76,8 @@ const GenMarshesMelons = ()=>{
     }
 
     const paragraphs = {
-        1: "",
-        2: "",
+        1: "This is a basic platforming game built with primarily vanilla JavaScript, jQuery and the Phaser.js game engine.",
+        2: "The app is able to execute user authentication and to track users' scores.",
         3: ""
     }
 

@@ -3,6 +3,7 @@ $orange: #E36414;
 $navy: #13262F;
 $ivory: #FFFDED;
 $gunmetal: #242F40;
+$offwhite: #EDEFFF;
 
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Reem+Kufi+Ink&display=swap');
@@ -23,7 +24,7 @@ $msgFont: 'Kanit', sans-serif;
     justify-content: center;
     align-items: center;
     min-height: 25vh;
-    background-color: $ivory;
+    background-color: $offwhite;
     font-family: $msgFont;
     font-size: 24px;
     font-weight: 500;
