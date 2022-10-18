@@ -27,7 +27,7 @@ const ContactMeContent = ()=>{
     return(
         <div id='contact-content-container'>
             <div id='contact-header'>
-                <h1>Get in touch with me!</h1>
+                <h1>Contact Me</h1>
             </div>
             <div id='contact-content'>
                 <div id='contact-info-container'>

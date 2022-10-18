@@ -7,12 +7,16 @@ $gunmetal: #242F40;
 
 #contact-content-container{
     width: 100%;
-    padding: 1em;
     font-family: $nameFont;
 }
 
 #contact-header{
     color: white;
+    font-family: $nameFont;
+    background-color: transparent;
+    width: fit-content;
+    padding: 0.01em 1em;
+    margin-bottom: 0.5em;
 }
 
 #download-container{
