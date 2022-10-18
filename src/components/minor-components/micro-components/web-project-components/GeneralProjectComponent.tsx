@@ -8,7 +8,20 @@ import HourglassBottomIcon from "@mui/icons-material/HourglassBottom"
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-const GeneralProjectComponent = ( { mobileBool, styles, imageArr, title, projectURL, techStack, platforms, paragraph1, paragraph2, paragraph3 }: any )=>{
+interface GenProjectComponentProps{
+    mobileBool: boolean,
+    styles: any,
+    imageArr: string[],
+    title: string,
+    projectURL: string,
+    techStack: string,
+    platforms: string,
+    paragraph1: string,
+    paragraph2: string,
+    paragraph3: string,
+}
+
+const GeneralProjectComponent = ( { mobileBool, styles, imageArr, title, projectURL, techStack, platforms, paragraph1, paragraph2, paragraph3 }: GenProjectComponentProps )=>{
     
     const [isLoading, setIsLoading] = useState(true)
 
