@@ -1,15 +1,9 @@
 import './sass/styles.scss'
 import LandingScreen from './components/LandingScreen';
 import HomeScreen from './components/HomeScreen';
-import Cookies from 'cookies-js';
 
 import { ReactNode } from 'react';
 import React from 'react';
-
-let cookiePage:string = Cookies.get('page')
-if(cookiePage){
-  cookiePage = JSON.parse(cookiePage)
-}
 
 //lil timer function
 function wait(ms:number){
@@ -20,10 +14,10 @@ interface IMyProps{
   thinScreenBool: boolean
 }
 class App extends React.Component<{}, IMyProps>{
-  constructor(props: any){
+  constructor(props: {} | Readonly<{}>){
     super(props);
     this.state = {
-      page: cookiePage? cookiePage: 'landing',
+      page: 'landing',
       thinScreenBool: false
     }
     this.setView = this.setView.bind(this)
