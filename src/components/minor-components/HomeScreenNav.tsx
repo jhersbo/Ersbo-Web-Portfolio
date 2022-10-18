@@ -19,23 +19,86 @@ const HomeScreenNav = ()=>{
         }
     ]
 
+    const languageArr = [
+        {
+            element: <i className="devicon-javascript-plain colored" style={{
+                fontSize: "50px",
+                backgroundColor: "black",
+                padding: "1px"
+            }}></i>
+        },
+        {
+            element: <i className="devicon-html5-plain-wordmark colored" style={{
+                fontSize: "50px",
+                padding: "1px"
+            }}></i>
+        },
+        {
+            element: <i className="devicon-css3-plain-wordmark colored" style={{
+                fontSize: "50px",
+                padding: "1px"
+            }}></i> 
+        },
+        {
+            element: <i className="devicon-react-original-wordmark colored" 
+            style={{
+                fontSize: "50px",
+                padding: "1px"
+            }}></i>
+        },
+        {
+            element: <i className="devicon-postgresql-plain-wordmark colored" 
+            style={{
+                fontSize: "50px",
+                padding: "1px"
+            }}></i>
+        },
+        {
+            element: <i className="devicon-python-plain-wordmark colored" 
+            style={{
+                fontSize: "50px",
+                padding: "1px",
+                color: "#386F9F"
+            }}></i>
+        },
+        {
+            element: <i className="devicon-flask-original-wordmark colored"
+            style={{
+                fontSize: "50px",
+                padding: "1px"
+            }}></i>
+          
+        }
+    ]
+
     const openInNewTab = (url: string): void=>{
         window.open(url, '_blank', "noopener,noreferrer")
     }
 
     const renderNav = (): any =>{
-        let mapProduct = linkArr.map((element: any, index: number)=>{
+        let mapProduct = linkArr.map((item: any, index: number)=>{
             return(
                 <motion.li 
                 key={index} 
-                id={element.label} 
+                id={item.label} 
                 className='nav-icon'
-                onClick={()=>{openInNewTab(element.hyperlink)}}
+                onClick={()=>{openInNewTab(item.hyperlink)}}
                 whileHover={{scale: 1.1,}}
                 whileTap={{scale: 0.8}}
                 >
-                    {element.icon}
+                    {item.icon}
                 </motion.li>
+            )
+        })
+        return mapProduct
+    }
+
+    const renderLanguages = ()=>{
+        let mapProduct = languageArr.map((item: any, index: number)=>{
+            return(
+                <li key={index}>
+                    {item.element}
+                </li>
             )
         })
         return mapProduct
@@ -43,7 +106,10 @@ const HomeScreenNav = ()=>{
 
     return(
         <nav id='homescreen-nav'>
-            <ul style={{listStyleType: "none"}}>
+            <ul id="languages">
+                {renderLanguages()}
+            </ul>
+            <ul id="socials">
                 {renderNav()}
             </ul>
         </nav>

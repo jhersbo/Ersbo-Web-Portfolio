@@ -10,6 +10,8 @@ $nameFont: 'Reem Kufi Ink', sans-serif;
 $msgFont: 'Kanit', sans-serif;
 
 #homescreen-nav{
+    display: flex;
+    justify-content: space-between;
     background-color: $off-white;
     box-shadow: 0px 5px 10px $grey;
     position: fixed;
@@ -23,8 +25,19 @@ $msgFont: 'Kanit', sans-serif;
 
 #homescreen-nav > ul{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    list-style-type: none;
     padding: 0px;
+}
+
+#languages{
+    width: 40%;
+    margin-left: 5%;
+}
+
+#socials{
+    width: 12.5%;
+    margin-right: 10%;
 }
 
 
