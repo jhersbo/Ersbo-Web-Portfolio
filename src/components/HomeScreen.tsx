@@ -1,8 +1,8 @@
 import "../sass/homeScreen.scss"
-import About from "./minor-components/About"
-import ContactMe from "./minor-components/ContactMe";
-import Projects from "./minor-components/Projects";
 import HomeScreenNav from './minor-components/HomeScreenNav'
+import GenAbout from "./minor-components/GenAbout";
+import GenContactMe from "./minor-components/GenContactMe";
+import GenProjects from "./minor-components/GenProjects";
 
 interface HomeScreenProps{
     thinScreenBool: boolean
@@ -13,9 +13,9 @@ const HomeScreen = ({ thinScreenBool }: HomeScreenProps)=>{
     return(
         <div id="container">
             <HomeScreenNav/>
-            <About/>
-            <Projects/>
-            <ContactMe/>
+            <GenAbout/>
+            <GenProjects/>
+            <GenContactMe/>
         </div>
     )
 }
