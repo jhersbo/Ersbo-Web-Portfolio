@@ -3,7 +3,7 @@ import ContactMeContent from "./micro-components/ContactMeContent"
 
 const GenContactMe = ()=>{
     return(
-        <GeneralBubbleComponent startingCoords={{x: 0, y: 500}} title={"Get in touch"} expandedY={"16vh"} internalJSX={<ContactMeContent/>}/>
+        <GeneralBubbleComponent startingCoords={{x: 0, y: 600}} title={"Get in touch"} expandedY={"16vh"} internalJSX={<ContactMeContent/>}/>
     )
 }
 
