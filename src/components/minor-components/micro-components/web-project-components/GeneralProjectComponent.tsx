@@ -68,12 +68,15 @@ const GeneralProjectComponent = ({ thinScreenBool, mobileBool, styles, imageArr,
                     <div style={styles.desc_container}>
                         <div style={{
                             display: "flex",
-                            justifyContent: "space-between"
+                            justifyContent: "space-between",
+                            width: "100%",
+                            alignItems: "center"
                         }}>
                             <h1 style={styles.h1}>{title}</h1>
                             <motion.button 
                             onClick={()=>{
-                                openInNewTab(projectURL)}
+                                    openInNewTab(projectURL)
+                                }
                             }
                             whileHover={{scale: 1.1}} 
                             style={styles.btn} 

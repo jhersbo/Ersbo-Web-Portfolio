@@ -15,8 +15,9 @@ const GenListr = ({ thinScreenBool }: Props)=>{
     const styles = {
         img_container:{
             display: "flex",
-            width: "55%",
-            justifyContent: "flex-end",
+            width: !thinScreenBool ? "55%" : "85%",
+            height: "auto",
+            justifyContent: !thinScreenBool ? "flex-end" : "center",
             alignItems: "center",
             padding: "1em",
             boxShadow: "inset 1px 1px 50px black",
@@ -26,40 +27,47 @@ const GenListr = ({ thinScreenBool }: Props)=>{
         },
         inner_container: {
             display: "flex",
+            flexDirection: !thinScreenBool ? "row" : "column",
             justifyContent: "space-between"
         },
         outer_container: {
-            padding: "none"
+            padding: !thinScreenBool ? "none" : "0.5em",
+            borderRadius: "15px"
         },
         desc_container: {
-            width: "40%"
+            display: !thinScreenBool ? "block" : "flex",
+            width: !thinScreenBool ? "40%" : "100%",
+            flexDirection: !thinScreenBool ? "inherit" : "column",
+            padding: !thinScreenBool ? "inherit" : "1%"
         },
         image: {
             width: "32%",
-            height: "fit-content",
+            height: "auto",
             margin: "0em 0.25em",
             borderRadius: "10px",
             boxShadow: "1px 1px 15px black",
         },
         h1: {
-            width: "60%",
-            margin: "0em 0em 0em 0.5em",
+            width: !thinScreenBool ? "100%" : "60%",
+            margin: !thinScreenBool ? "0em 0em 0em 0.5em" : "0em",
             fontFamily: 'Reem Kufi Ink'
         },
         btn: {
             cursor: "pointer",
-            height: "auto",
+            height: "fit-content",
+            width: !thinScreenBool ? "auto" : "30%",
             color: "#EDEFFF",
             backgroundColor: "#242F40",
             border: "3px inset #EDEFFF",
             borderRadius: "10px",
             boxShadow: "2px 2px 10px black",
             fontFamily: "Reem Kufi Ink",
-            fontSize: "24px",
-            fontWeight: 500
+            fontSize: "18px",
+            fontWeight: 300
         },
         gen: {
             margin: "3% 0%",
+            width: !thinScreenBool ? "100%" : "auto",
             fontFamily: "Reem Kufi Ink",
             fontSize: '20px'
         }

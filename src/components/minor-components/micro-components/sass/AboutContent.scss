@@ -3,43 +3,73 @@
 $nameFont: 'Reem Kufi Ink', sans-serif;
 $msgFont: 'Kanit', sans-serif;
 
-#about-header{
-    display: flex;
-    justify-content: flex-start;
+$breakpoint-mobile: 900px;
+
+@media (min-width: $breakpoint-mobile){
+    #about-header{
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    #about-header-content{
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 1px 1px 10px black;
+        margin-right: 1em;
+        padding-left: 1em;
+        width: 75%;
+    }
+    
+    .about-container{
+        display: flex;
+        color: black;
+    }
+    
+    #name-title-about{
+        font-family: $nameFont;
+        align-items: center;
+    }
+    
+    #content-about{
+        // width: 80%;
+        font-family: $nameFont;
+        font-size: 24px;
+    }
+    
+    #about-image{
+        margin-left: auto;
+        margin-right: 1em;
+        height: fit-content;
+        width: 25%;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px black;
+    
+        align-self: center;
+    }
 }
 
-#about-header-content{
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 1px 1px 10px black;
-    margin-right: 1em;
-    padding-left: 1em;
-    width: 75%;
-}
+@media (max-width: $breakpoint-mobile){
+    .about-container{
+        max-width: 90vw;
+        color: black;
+    }
 
-.about-container{
-    display: flex;
-    color: black;
-}
+    #about-header-content{
+        background-color: white;
+        padding: 0.25em;
+        border-radius: 15px;
+        box-shadow: 1px 1px 10px black;
+    }
 
-#name-title-about{
-    font-family: $nameFont;
-    align-items: center;
-}
+    #about-image{
+        height: auto;
+        width: 35%;
+        border-radius: 15px;
+        box-shadow: 1px 1px 5px black;
+    }
 
-#content-about{
-    // width: 80%;
-    font-family: $nameFont;
-    font-size: 24px;
-}
-
-#about-image{
-    margin-left: auto;
-    margin-right: 1em;
-    height: fit-content;
-    width: 25%;
-    border-radius: 5px;
-    box-shadow: 1px 1px 5px black;
-
-    align-self: center;
+    #name-image{
+        display: flex;
+        justify-content: space-between;
+    }
 }

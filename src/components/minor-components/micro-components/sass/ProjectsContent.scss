@@ -5,62 +5,102 @@ $msgFont: 'Kanit', sans-serif;
 $ivory: #FFFDED;
 $gunmetal: #242F40;
 
-#projects-header{
-    color: white;
-    font-family: $nameFont;
-    background-color: transparent;
-    width: fit-content;
-    padding: 0.01em 1em;
-    margin-bottom: 0.5em;
+$breakpoint-mobile: 900px;
+
+@media (min-width: $breakpoint-mobile){
+    #projects-header{
+        color: white;
+        font-family: $nameFont;
+        background-color: transparent;
+        width: fit-content;
+        padding: 0.01em 1em;
+        margin-bottom: 0.5em;
+    }
+    
+    #projects-header-content{
+        width: 100%;
+    }
+    
+    #project-thumbnail-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 1em 0;
+    
+        //not sure I want to keep the below
+        border: 2px solid white;
+        border-radius: 15px;
+        box-shadow: inset 0px 0px 50px black;
+    }
+    
+    .project-thumbnail{
+        cursor: pointer;
+        background-color: white;
+        width: fit-content;
+        border-radius: 15px;
+        box-shadow: 1px 1px 10px black;
+        padding: 0.5em;
+        font-family: $nameFont;
+    }
+    
+    #project-expanded-container{
+        display: flex;
+        background-color: white;
+        margin-bottom: 1em;
+        margin-right: 1em;
+        padding: 0.5em;
+    
+        box-shadow: 1px 1px 50px black;
+        border-radius: 15px;
+    }
+    
+    #arrow-back{
+        cursor: pointer;
+        top: 0%;
+        height: 20%;
+        margin: 0.33em 0em 0.67em 0em;
+        padding: none;
+        background-color: transparent;
+        border: none;
+    }
+    
+    #thumbnail-hr{
+        color: $gunmetal;
+    }
 }
 
-#projects-header-content{
-    width: 100%;
-}
+@media (max-width: $breakpoint-mobile){
+    #project-thumbnail-container{
+        padding: 1em 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-#project-thumbnail-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 1em 0;
+    .project-thumbnail{
+        background-color: white;
+        color: black;
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 1px 1px 10px black;
+        font-family: $nameFont;
+        padding: 0.5em;
+        margin: 0em 0em 1em 0em;
+    }
+    #project-expanded-container{
+        display: flex;
+        background-color: white;
+        color: black;
+        border-radius: 15px;
+    }
 
-    //not sure I want to keep the below
-    border: 2px solid white;
-    border-radius: 15px;
-    box-shadow: inset 0px 0px 50px black;
-}
-
-.project-thumbnail{
-    cursor: pointer;
-    background-color: white;
-    width: fit-content;
-    border-radius: 15px;
-    box-shadow: 1px 1px 10px black;
-    padding: 0.5em;
-    font-family: $nameFont;
-}
-
-#project-expanded-container{
-    display: flex;
-    background-color: white;
-    margin-bottom: 1em;
-    margin-right: 1em;
-    padding: 0.5em;
-
-    box-shadow: 1px 1px 50px black;
-    border-radius: 15px;
-}
-
-#arrow-back{
-    cursor: pointer;
-    top: 0%;
-    height: 20%;
-    margin: 0.33em 0em 0.67em 0em;
-    padding: none;
-    background-color: transparent;
-    border: none;
-}
-
-#thumbnail-hr{
-    color: $gunmetal;
+    #arrow-back{
+        cursor: pointer;
+        top: 0%;
+        height: 3%;
+        margin: 0.33em 0em 0em 0em;
+        padding: none;
+        background-color: transparent;
+        border: none;
+    }
 }

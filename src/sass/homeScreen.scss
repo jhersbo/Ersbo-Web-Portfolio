@@ -1,13 +1,28 @@
 $ivory: #FFFDED;
 
-#container{
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 15em;
-  min-width: 100vw;
-  min-height: 100vh;
-  position: absolute;
+$breakpoint-mobile: 900px;
 
-  background-color: #8BC6EC;
-  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+@media (min-width: $breakpoint-mobile){
+  #container{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15em;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: absolute;
+  
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+  }
+}
+
+@media (max-width: $breakpoint-mobile){
+  #container{
+    min-width: 100vw;
+    min-height: 100vh;
+    position: absolute;
+  
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+  }
 }

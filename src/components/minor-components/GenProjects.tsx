@@ -7,7 +7,7 @@ interface ProjectsProps{
 
 const GenProjects = ({ thinScreenBool }: ProjectsProps)=>{
     return(
-        <GeneralBubbleComponent thinScreenBool={thinScreenBool} startingCoords={{x: 0, y: 350}} title={"My Projects"} expandedY={"14vh"} internalJSX={<ProjectsContent thinScreenBool={thinScreenBool}/>}/>
+        <GeneralBubbleComponent thinScreenBool={thinScreenBool} startingCoords={{x: 0, y: thinScreenBool ? 110 : 350}} title={"My Projects"} expandedY={"14vh"} internalJSX={<ProjectsContent thinScreenBool={thinScreenBool}/>}/>
     )
 }
 

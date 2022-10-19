@@ -9,38 +9,81 @@ $slate-grey: #5F758E;
 $nameFont: 'Reem Kufi Ink', sans-serif;
 $msgFont: 'Kanit', sans-serif;
 
-#homescreen-nav{
-    display: flex;
-    justify-content: space-between;
-    background-color: $off-white;
-    box-shadow: 0px 5px 10px $grey;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-    top: 0;
-    // display: flex;
-    // justify-content: space-around;
-    font-family: $nameFont;
+$breakpoint-mobile: 900px;
+
+@media (min-width: $breakpoint-mobile){
+    #homescreen-nav{
+        display: flex;
+        justify-content: space-between;
+        background-color: $off-white;
+        box-shadow: 0px 5px 10px $grey;
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+        top: 0;
+        // display: flex;
+        // justify-content: space-around;
+        font-family: $nameFont;
+    }
+    
+    #homescreen-nav > ul{
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0px;
+    }
+    
+    #languages{
+        width: 40%;
+        margin-left: 5%;
+    }
+    
+    #socials{
+        width: 8%;
+        margin-right: 5%;
+    }
+    
+    
+    .nav-icon:hover{
+        cursor: pointer;
+    }
 }
 
-#homescreen-nav > ul{
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    padding: 0px;
-}
-
-#languages{
-    width: 40%;
-    margin-left: 5%;
-}
-
-#socials{
-    width: 8%;
-    margin-right: 5%;
-}
-
-
-.nav-icon:hover{
-    cursor: pointer;
+@media (max-width: $breakpoint-mobile){
+    #homescreen-nav{
+        display: flex;
+        justify-content: space-between;
+        background-color: $off-white;
+        box-shadow: 0px 5px 10px $grey;
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+        top: 0;
+        // display: flex;
+        // justify-content: space-around;
+        font-family: $nameFont;
+        padding-right: 1em;
+    }
+    
+    #homescreen-nav > ul{
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0px;
+    }
+    
+    #languages{
+        width: 40%;
+        margin-left: 5%;
+    }
+    
+    #socials{
+        width: 8%;
+        margin-right: 10%;
+    }
+    
+    
+    .nav-icon:hover{
+        cursor: pointer;
+    }
 }

@@ -24,7 +24,20 @@ const AboutContent = ({ thinScreenBool }: AboutContentProps)=>{
             <div id='about-header-content'>
                 <div id="about-header">
                     <div id='name-title-about'>
-                        <h1>Jack Ersbo</h1>
+                        {
+                            !thinScreenBool ?
+                            <h1>Jack Ersbo</h1>
+                            :
+                            <div id='name-image'>
+                                <h1>Jack Ersbo</h1>
+                                {
+                                    !isLoading && thinScreenBool ?
+                                    <img src={process.env.PUBLIC_URL + '/images/me&millie.jpg'} id='about-image' alt='Jack Ersbo and his cat, Millie.'></img>
+                                    :
+                                    null
+                                }
+                            </div>
+                        }
                         <h3>Full-Stack Software Developer</h3>
                     </div>
                 </div>
@@ -43,7 +56,7 @@ const AboutContent = ({ thinScreenBool }: AboutContentProps)=>{
                     </p>
                 </div>
             </div>
-            {!isLoading ? 
+            {!isLoading && !thinScreenBool? 
                 <img src={process.env.PUBLIC_URL + '/images/me&millie.jpg'} id='about-image' alt='Jack Ersbo and his cat, Millie.'></img>
             :
                 null

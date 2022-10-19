@@ -12,12 +12,12 @@ const HomeScreenNav = ({ thinScreenBool }: HomeScreenNavProps)=>{
 
     const linkArr = [
         {
-            icon: <LinkedInIcon sx={{fontSize: "50px"}}/>,
+            icon: <LinkedInIcon sx={{fontSize: !thinScreenBool ? "50px" : "30px"}}/>,
             label: "LinkedIn",
             hyperlink: "https://www.linkedin.com/in/jack-henry-ersbo/"
         },
         {
-            icon: <GitHubIcon sx={{fontSize: "50px"}}/>,
+            icon: <GitHubIcon sx={{fontSize: !thinScreenBool ? "50px" : "30px"}}/>,
             label: "Github",
             hyperlink: "https://github.com/jhersbo"
         }
@@ -26,41 +26,41 @@ const HomeScreenNav = ({ thinScreenBool }: HomeScreenNavProps)=>{
     const languageArr = [
         {
             element: <i className="devicon-javascript-plain colored" style={{
-                fontSize: "50px",
+                fontSize: !thinScreenBool ? "50px" : "30px",
                 backgroundColor: "black",
                 padding: "1px"
             }}></i>
         },
         {
             element: <i className="devicon-html5-plain-wordmark colored" style={{
-                fontSize: "50px",
+                fontSize: !thinScreenBool ? "50px" : "30px",
                 padding: "1px"
             }}></i>
         },
         {
             element: <i className="devicon-css3-plain-wordmark colored" style={{
-                fontSize: "50px",
+                fontSize: !thinScreenBool ? "50px" : "30px",
                 padding: "1px"
             }}></i> 
         },
         {
             element: <i className="devicon-react-original-wordmark colored" 
             style={{
-                fontSize: "50px",
+                fontSize: !thinScreenBool ? "50px" : "30px",
                 padding: "1px"
             }}></i>
         },
         {
             element: <i className="devicon-postgresql-plain-wordmark colored" 
             style={{
-                fontSize: "50px",
+                fontSize: !thinScreenBool ? "50px" : "30px",
                 padding: "1px"
             }}></i>
         },
         {
             element: <i className="devicon-python-plain-wordmark colored" 
             style={{
-                fontSize: "50px",
+                fontSize: !thinScreenBool ? "50px" : "30px",
                 padding: "1px",
                 color: "#386F9F"
             }}></i>
@@ -68,7 +68,7 @@ const HomeScreenNav = ({ thinScreenBool }: HomeScreenNavProps)=>{
         {
             element: <i className="devicon-flask-original-wordmark colored"
             style={{
-                fontSize: "50px",
+                fontSize: !thinScreenBool ? "50px" : "30px",
                 padding: "1px"
             }}></i>
           

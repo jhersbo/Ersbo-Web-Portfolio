@@ -51,7 +51,7 @@ const ProjectsContent = ({ thinScreenBool }: ProjectsProps)=>{
         let mapProduct = projectList.map((element, index)=>{
             return(
                 <motion.div className='project-thumbnail' key={index} style={{
-                    width: `${100 / projectList.length - 6}%`
+                    width: !thinScreenBool ? `${100 / projectList.length - 6}%` : "100%"
                 }}
                 onClick={()=>{setClickExpandIndex(index)}}
                 whileHover={{scale: 1.1}}
@@ -70,19 +70,32 @@ const ProjectsContent = ({ thinScreenBool }: ProjectsProps)=>{
     return(
         <div id="projects-container">
             <div id='projects-header-content'>
-                <div id="projects-header">
-                    <h1>My Web Projects</h1>
-                </div>
+                {
+                    !thinScreenBool ? 
+                    <div id="projects-header">
+                        <h1>My Web Projects</h1>
+                    </div>
+                    :
+                    null
+                }
                 {clickExpandIndex === -1 ?
                     <div id='project-thumbnail-container'>
                         {renderProjectList()}
                     </div>
                 :
                     <div id='project-expanded-container'>
-                        <button id='arrow-back' onClick={()=>{setClickExpandIndex(-1)}} aria-label='Back'>
-                            <ArrowBackRoundedIcon sx={{fontSize: "36px"}}/>
-                        </button>
+                        {
+                            !thinScreenBool ? 
+                            <button id='arrow-back' onClick={()=>{setClickExpandIndex(-1)}} aria-label='Back'>
+                                <ArrowBackRoundedIcon sx={{fontSize: "36px"}}/>
+                            </button>
+                            :
+                            null
+                        }
                         <div id='project-expanded-content'>
+                            <button id='arrow-back' onClick={()=>{setClickExpandIndex(-1)}} aria-label='Back'>
+                                <ArrowBackRoundedIcon sx={{fontSize: "36px"}}/>
+                            </button>
                             {projectList[clickExpandIndex].jsxElement}
                         </div>
                     </div>
