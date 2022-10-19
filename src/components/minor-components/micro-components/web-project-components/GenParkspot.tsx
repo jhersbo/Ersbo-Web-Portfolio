@@ -38,7 +38,7 @@ const GenParkspot = ({ thinScreenBool }: Props)=>{
             justifyContent: "space-between"
         },
         outer_container: {
-            padding: !thinScreenBool ? "none" : "0.5em",
+            padding: !thinScreenBool ? "none" : "0em 0.5em 0.5em 0.5em",
             borderRadius: "15px"
         },
         desc_container: {

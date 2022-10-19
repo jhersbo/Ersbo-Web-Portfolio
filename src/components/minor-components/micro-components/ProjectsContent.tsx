@@ -93,9 +93,14 @@ const ProjectsContent = ({ thinScreenBool }: ProjectsProps)=>{
                             null
                         }
                         <div id='project-expanded-content'>
-                            <button id='arrow-back' onClick={()=>{setClickExpandIndex(-1)}} aria-label='Back'>
-                                <ArrowBackRoundedIcon sx={{fontSize: "36px"}}/>
-                            </button>
+                            {
+                                thinScreenBool ? 
+                                <button id='arrow-back' onClick={()=>{setClickExpandIndex(-1)}} aria-label='Back'>
+                                    <ArrowBackRoundedIcon sx={{fontSize: "36px"}}/>
+                                </button>
+                                :
+                                null
+                            }
                             {projectList[clickExpandIndex].jsxElement}
                         </div>
                     </div>
