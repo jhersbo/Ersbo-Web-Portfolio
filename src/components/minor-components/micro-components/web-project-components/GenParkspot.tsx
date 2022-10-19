@@ -62,7 +62,7 @@ const GenParkspot = ({ thinScreenBool }: Props)=>{
         btn: {
             cursor: "pointer",
             height: "fit-content",
-            width: !thinScreenBool ? "auto" : "30%",
+            width: !thinScreenBool ? "auto" : "35%",
             color: "#EDEFFF",
             backgroundColor: "#242F40",
             border: "3px inset #EDEFFF",
