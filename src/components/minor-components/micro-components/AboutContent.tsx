@@ -29,9 +29,9 @@ const AboutContent = ({ thinScreenBool }: AboutContentProps)=>{
                             <h1>Jack Ersbo</h1>
                             :
                             <div id='name-image'>
-                                <h1>Jack Ersbo</h1>
+                                <h1>Jack Ersbo</h1>    
                                 {
-                                    !isLoading && thinScreenBool ?
+                                    isLoading ? 
                                     <img src={process.env.PUBLIC_URL + '/images/me&millie.jpg'} id='about-image' alt='Jack Ersbo and his cat, Millie.'></img>
                                     :
                                     null
