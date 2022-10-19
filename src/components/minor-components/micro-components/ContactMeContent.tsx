@@ -30,9 +30,6 @@ const ContactMeContent = ({ thinScreenBool }: ContactMeProps)=>{
 
     return(
         <div id='contact-content-container'>
-            <div id='contact-header'>
-                <h1>Contact Me</h1>
-            </div>
             <div id='contact-content'>
                 <div id='contact-info-container'>
                     <h3>My Contact Information:</h3>

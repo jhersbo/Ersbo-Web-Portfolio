@@ -10,23 +10,16 @@ $gunmetal: #242F40;
     font-family: $nameFont;
 }
 
-#contact-header{
-    color: white;
-    font-family: $nameFont;
-    background-color: transparent;
-    width: fit-content;
-    padding: 0.01em 1em;
-    margin-bottom: 0.5em;
-}
-
 #download-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: column;
+    height: 65%;
+    align-self: center;
     padding: 0em 1em;
     border-radius: 15px;
     border: 2px solid white;
-    box-shadow: inset 1px 1px 20px black;
+    box-shadow: inset 1px 1px 30px black;
 }
 
 #contact-content{
@@ -39,6 +32,7 @@ $gunmetal: #242F40;
     width: 60%;
     padding: 0em 1em;
     border-radius: 15px;
+    font-size: 18px;
     box-shadow: 1px 1px 15px black;
 }
 
@@ -60,6 +54,7 @@ $gunmetal: #242F40;
     font-size: 18px;
     height: fit-content;
     padding: 0.5em;
+    margin: 1em 0em;
     border-radius: 10px;
     border: 2px solid white;
     box-shadow: 1px 1px 10px black;
