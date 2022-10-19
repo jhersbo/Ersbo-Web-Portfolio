@@ -68,7 +68,16 @@ const LandingScreen = ({ setPage, thinScreenBool }: LandingScreenProps)=>{
     }else{
         return(
             <div onClick={()=>{setClicked(true)}} onMouseUp={()=>{setView('home')}}>
-                <h1>ThinScreen</h1>
+                <header id="top-landing-panels">
+                    <motion.div id="landing-name-div" className="top-landing-panels" 
+                    animate={clicked ? "clicked" : "unclicked"} 
+                    variants={variantsLeft}
+                    transition={{ type: "spring", stiffness: 100 }}>
+                        <motion.h1 id="landing-name"
+                        whileHover={{scale: 1.1,}}
+                        transition={{ type: "spring", stiffness: 400, damping: 8}}>Jack<br></br>Ersbo</motion.h1>
+                    </motion.div>
+                </header>
             </div>
         )
     }

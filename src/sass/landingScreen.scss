@@ -59,5 +59,15 @@ $breakpoint-mobile: 900px;
 }
 
 @media (max-width: $breakpoint-mobile){
-    // mobile sass here
+    #landing-name-div{
+        min-width: 100%;
+        background-color: $orange;
+        font-family: $nameFont;
+        font-size: 24px;
+    }
+
+    #landing-name{
+        margin: auto;
+        padding: 0.5em
+    }
 }
