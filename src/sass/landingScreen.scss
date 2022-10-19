@@ -10,45 +10,54 @@ $offwhite: #EDEFFF;
 $nameFont: 'Reem Kufi Ink', sans-serif;
 $msgFont: 'Kanit', sans-serif;
 
-#top-landing-panels{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    min-height: 75vh;
+//breakpoints
+$breakpoint-mobile: 900px;
+
+@media (min-width: $breakpoint-mobile){
+    #top-landing-panels{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        min-height: 75vh;
+    }
+    
+    #landing-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 25vh;
+        background-color: $offwhite;
+        font-family: $msgFont;
+        font-size: 24px;
+        font-weight: 500;
+    }
+    
+    .top-landing-panels{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75vh;
+    }
+    
+    #landing-name-div{
+        min-width: 32vw;
+        background-color: $orange;
+        font-family: $nameFont;
+        font-size: 42px;
+        // box-shadow: inset -5px -5px 20px black;
+    }
+    
+    #landing-role-div{
+        min-width: 68vw;
+        background-color: $gunmetal;
+        font-family: $nameFont;
+        font-size: 42px;
+        color: white;
+    }
 }
 
-#landing-footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 25vh;
-    background-color: $offwhite;
-    font-family: $msgFont;
-    font-size: 24px;
-    font-weight: 500;
-}
-
-.top-landing-panels{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 75vh;
-}
-
-#landing-name-div{
-    min-width: 32vw;
-    background-color: $orange;
-    font-family: $nameFont;
-    font-size: 42px;
-    // box-shadow: inset -5px -5px 20px black;
-}
-
-#landing-role-div{
-    min-width: 68vw;
-    background-color: $gunmetal;
-    font-family: $nameFont;
-    font-size: 42px;
-    color: white;
+@media (max-width: $breakpoint-mobile){
+    // mobile sass here
 }

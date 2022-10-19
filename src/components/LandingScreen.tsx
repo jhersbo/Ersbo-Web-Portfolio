@@ -67,7 +67,7 @@ const LandingScreen = ({ setPage, thinScreenBool }: LandingScreenProps)=>{
         )
     }else{
         return(
-            <div>
+            <div onClick={()=>{setClicked(true)}} onMouseUp={()=>{setView('home')}}>
                 <h1>ThinScreen</h1>
             </div>
         )
