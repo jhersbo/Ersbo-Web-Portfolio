@@ -1,4 +1,4 @@
 # My Personal Web Portfolio Site #
-### Tech Utilized ###
+#### Tech Utilized ####
 
-This site is built with React with Typescript.
+This site is built with TypeScript and React.js.
