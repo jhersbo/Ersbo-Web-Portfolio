@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Reem+Kufi+Ink&display=swap');
-$nameFont: 'Reem Kufi Ink', sans-serif;
-$msgFont: 'Kanit', sans-serif;
-$gunmetal: #242F40;
+@import "/src/sass/_variables";
 
 $breakpoint-mobile: 900px;
 
@@ -20,7 +17,7 @@ $breakpoint-mobile: 900px;
         z-index: 4;
         color: white;
         position: absolute;
-        font-family: $nameFont;
+        font-family: $rubik;
         font-size: 20px;
     }
     
@@ -78,7 +75,7 @@ $breakpoint-mobile: 900px;
     .box{
         z-index: 4;
         color: white;
-        font-family: $nameFont;
+        font-family: $rubik;
         font-size: 20px;
         background: rgb(36,47,64);
         background: radial-gradient(circle, rgba(36,47,64,1) 0%, rgba(43,53,70,1) 93%, rgba(6,9,13,1) 100%);

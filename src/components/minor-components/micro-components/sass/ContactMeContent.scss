@@ -1,16 +1,11 @@
-//fonts
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Reem+Kufi+Ink&display=swap');
-$nameFont: 'Reem Kufi Ink', sans-serif;
-$msgFont: 'Kanit', sans-serif;
-$ivory: #FFFDED;
-$gunmetal: #242F40;
+@import "/src/sass/_variables";
 
 $mobile-breakpoint: 900px;
 
 @media (min-width: $mobile-breakpoint){
     #contact-content-container{
         width: 100%;
-        font-family: $nameFont;
+        font-family: $nunito;
     }
     
     #download-container{
@@ -53,7 +48,7 @@ $mobile-breakpoint: 900px;
         color: white;
         background-color: $gunmetal;
         border: none;
-        font-family: $nameFont;
+        font-family: $nunito;
         font-size: 18px;
         height: fit-content;
         padding: 0.5em;
@@ -70,7 +65,7 @@ $mobile-breakpoint: 900px;
 
 @media (max-width: $mobile-breakpoint){
     #contact-content-container{
-        font-family: $nameFont;
+        font-family: $nunito;
     }
 
     #contact-content{
@@ -106,7 +101,7 @@ $mobile-breakpoint: 900px;
         color: white;
         background-color: $gunmetal;
         border: none;
-        font-family: $nameFont;
+        font-family: $nunito;
         font-size: 18px;
         height: fit-content;
         padding: 0.5em;

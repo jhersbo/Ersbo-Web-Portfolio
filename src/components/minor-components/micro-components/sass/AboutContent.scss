@@ -1,7 +1,4 @@
-//fonts
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Reem+Kufi+Ink&display=swap');
-$nameFont: 'Reem Kufi Ink', sans-serif;
-$msgFont: 'Kanit', sans-serif;
+@import "/src/sass/_variables";
 
 $breakpoint-mobile: 900px;
 
@@ -26,13 +23,13 @@ $breakpoint-mobile: 900px;
     }
     
     #name-title-about{
-        font-family: $nameFont;
+        font-family: $nunito;
         align-items: center;
     }
     
     #content-about{
         // width: 80%;
-        font-family: $nameFont;
+        font-family: $nunito;
         font-size: 24px;
     }
     

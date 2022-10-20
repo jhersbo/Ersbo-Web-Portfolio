@@ -1,4 +1,4 @@
-import './sass/styles.scss'
+import './sass/app.scss'
 import LandingScreen from './components/LandingScreen';
 import HomeScreen from './components/HomeScreen';
 
