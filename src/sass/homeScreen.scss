@@ -20,6 +20,9 @@ $breakpoint-mobile: 900px;
   #container{
     min-width: 100vw;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     padding-bottom: 15em;
     background-color: #8BC6EC;
