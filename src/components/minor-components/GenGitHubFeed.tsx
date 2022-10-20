@@ -1,4 +1,3 @@
-import { Octokit } from 'octokit'
 import GeneralBubbleComponent from "./GeneralBubbleComponent"
 import GitHubFeedContent from './micro-components/GitHubFeedContent'
 
