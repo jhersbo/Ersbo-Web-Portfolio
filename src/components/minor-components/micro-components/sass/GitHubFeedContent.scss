@@ -1,9 +1,46 @@
 @import "/src/sass/_variables";
 
-#gh-feed-container{
-    // background-color: $offwhite;
-    color: black;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+$breakpoint-mobile: 900px;
+
+@media (min-width: $breakpoint-mobile){
+    #gh-feed-container{
+        // background-color: $offwhite;
+        color: black;
+        width: 80%;
+        margin-left: 5%; 
+        border: 3px solid white;
+        border-radius: 15px;
+        padding: 1em;
+        box-shadow: inset 1px 1px 20px black;
+    }
+    
+    #avatar-image{
+        width: 20%;
+        height: auto;
+        margin: 0% 80% 0% 0%;
+        border-radius: 50%;
+        align-self: baseline;
+    }
+}
+
+@media (max-width: $breakpoint-mobile){
+    #gh-feed-container{
+        // background-color: $offwhite;
+        color: black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        border: 3px solid white;
+        border-radius: 15px;
+        padding: 0.5em;
+        box-shadow: inset 1px 1px 20px black;
+    }
+    
+    #avatar-image{
+        width: 20%;
+        height: auto;
+        margin: 0% 80% 0% 0%;
+        border-radius: 50%;
+        align-self: baseline;
+    }
 }

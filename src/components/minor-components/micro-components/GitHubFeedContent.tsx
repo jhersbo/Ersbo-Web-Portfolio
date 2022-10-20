@@ -35,8 +35,11 @@ const GitHubFeedContent = ({ thinScreenBool }: GitHubFeedContentProps)=>{
             listStyleType: "none",
             backgroundColor: "white",
             borderRadius: "15px",
+            boxShadow: "1px 1px 10px black",
             padding: "0.5em",
-            margin: "0em 0em 0.5em 0em"
+            margin: "0em 0em 0.5em 0em",
+            width: !thinScreenBool ? "auto" : "100%",
+            fontSize: !thinScreenBool ? "18px" : "16px"
         },
         a: {
             textDecoration: "none",
@@ -54,18 +57,18 @@ const GitHubFeedContent = ({ thinScreenBool }: GitHubFeedContentProps)=>{
         }else{
             // eslint-disable-next-line array-callback-return
             let mapProduct = commits.map((item: any, index: number) => {
-                while(index <= 11){
+                while(index <= 7){
                     return(
                         <ul key={index} style={styles.ul}>
-                            <li>
-                                <b>Type:</b> &nbsp; {item.type}
-                            </li>
                             <li>
                                 <b>Date:</b> &nbsp; {item.created_at.slice(0, item.created_at.indexOf("T"))}
                             </li>
                             <li>
+                                <b>Type:</b> &nbsp; {item.type}
+                            </li>
+                            <li>
                                 <a href={`https://github.com/${item.repo.name}`} style={styles.a}>
-                                    {item.repo.name}
+                                    <b>Repo:</b> &nbsp; {item.repo.name}
                                 </a>
                             </li>
                         </ul>

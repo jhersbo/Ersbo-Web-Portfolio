@@ -20,6 +20,11 @@ $breakpoint-mobile: 900px;
         font-family: $rubik;
         font-size: 18px;
     }
+
+    #title{
+        color: white;
+        font-family: $rubik;
+    }
     
     .expanded-box{
         margin-left: 0em;
@@ -46,7 +51,7 @@ $breakpoint-mobile: 900px;
         border-radius: 50%;
         height: 60px;
         width: 68px;
-        margin-left: 1em;
+        margin-left: 2em;
         margin-top: 1em; 
         background: #242F40;
         // background: hover ? "black" : "none", 
