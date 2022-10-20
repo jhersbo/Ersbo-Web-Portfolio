@@ -7,7 +7,7 @@ interface ContactMeProps{
 
 const GenContactMe = ({ thinScreenBool }: ContactMeProps)=>{
     return(
-        <GeneralBubbleComponent thinScreenBool={thinScreenBool} startingCoords={{x: thinScreenBool ? 0 : 0, y: thinScreenBool? 130 : 850}} title={"Get in touch"} expandedY={"18vh"} internalJSX={<ContactMeContent thinScreenBool={thinScreenBool}/>}/>
+        <GeneralBubbleComponent thinScreenBool={thinScreenBool} startingCoords={{x: thinScreenBool ? 0 : 0, y: thinScreenBool? 130 : 700}} title={"Get in touch"} expandedY={"18vh"} internalJSX={<ContactMeContent thinScreenBool={thinScreenBool}/>}/>
     )
 }
 

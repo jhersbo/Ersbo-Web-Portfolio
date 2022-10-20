@@ -1,0 +1,9 @@
+@import "/src/sass/_variables";
+
+#gh-feed-container{
+    // background-color: $offwhite;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
