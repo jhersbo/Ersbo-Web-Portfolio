@@ -23,7 +23,6 @@ const GitHubFeedContent = ({ thinScreenBool }: GitHubFeedContentProps)=>{
                     "content-type": "application/json"
                 }
             })
-            console.log(response.data)
             setCommits(response.data)
         }
         retrieveGHCommitData()
