@@ -38,7 +38,6 @@ const AboutContent = ({ thinScreenBool }: AboutContentProps)=>{
                                 }
                             </div>
                         }
-                        <h3>Full-Stack Software Developer</h3>
                     </div>
                 </div>
                 <div id='content-about'>

@@ -67,7 +67,7 @@ const GitHubFeedContent = ({ thinScreenBool }: GitHubFeedContentProps)=>{
                             </li>
                             <li>
                                 <a href={`https://github.com/${item.repo.name}`} style={styles.a}>
-                                    <b>Repo:</b> &nbsp; {item.repo.name}
+                                    <b>Repo:</b> &nbsp; <u>{item.repo.name}</u>
                                 </a>
                             </li>
                         </ul>
