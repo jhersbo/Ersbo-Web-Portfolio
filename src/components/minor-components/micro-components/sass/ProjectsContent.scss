@@ -4,7 +4,7 @@ $breakpoint-mobile: 900px;
 
 @media (min-width: $breakpoint-mobile){
     #projects-header{
-        color: white;
+        color: $offwhite;
         font-family: $nunito;
         background-color: transparent;
         width: fit-content;
@@ -23,14 +23,14 @@ $breakpoint-mobile: 900px;
         padding: 1em 0;
     
         //not sure I want to keep the below
-        border: 2px solid white;
+        border: 2px solid $offwhite;
         border-radius: 15px;
         box-shadow: inset 0px 0px 50px black;
     }
     
     .project-thumbnail{
         cursor: pointer;
-        background-color: white;
+        background-color: $offwhite;
         width: fit-content;
         border-radius: 15px;
         box-shadow: 1px 1px 10px black;
@@ -40,7 +40,7 @@ $breakpoint-mobile: 900px;
     
     #project-expanded-container{
         display: flex;
-        background-color: white;
+        background-color: $offwhite;
         margin-bottom: 1em;
         margin-right: 1em;
         padding: 0.5em;
@@ -73,18 +73,23 @@ $breakpoint-mobile: 900px;
     }
 
     .project-thumbnail{
-        background-color: white;
+        background-color: $offwhite;
         color: black;
         width: 100%;
         border-radius: 15px;
         box-shadow: 1px 1px 10px black;
-        font-family: $nunito;
+        font-family: $rubik;
         padding: 0.5em;
         margin: 0em 0em 1em 0em;
     }
+
+    .project-thumbnail-child{
+        margin: 0.2em;
+    }
+
     #project-expanded-container{
         display: flex;
-        background-color: white;
+        background-color: $offwhite;
         color: black;
         border-radius: 15px;
     }

@@ -16,7 +16,7 @@ $mobile-breakpoint: 900px;
         align-self: center;
         padding: 0em 1em;
         border-radius: 15px;
-        border: 2px solid white;
+        border: 2px solid $offwhite;
         box-shadow: inset 1px 1px 30px black;
     }
     
@@ -26,7 +26,7 @@ $mobile-breakpoint: 900px;
     }
     
     #contact-info-container{
-        background-color: white;
+        background-color: $offwhite;
         width: 60%;
         padding: 0em 1em;
         border-radius: 15px;
@@ -45,7 +45,7 @@ $mobile-breakpoint: 900px;
     
     .contact-btn{
         cursor: pointer;
-        color: white;
+        color: $offwhite;
         background-color: $gunmetal;
         border: none;
         font-family: $nunito;
@@ -54,7 +54,7 @@ $mobile-breakpoint: 900px;
         padding: 0.5em;
         margin: 1em 0em;
         border-radius: 10px;
-        border: 2px solid white;
+        border: 2px solid $offwhite;
         box-shadow: 1px 1px 10px black;
     }
     
@@ -75,7 +75,7 @@ $mobile-breakpoint: 900px;
 
     #contact-info-container{
         font-size: 16px;
-        background-color: white;
+        background-color: $offwhite;
         border-radius: 15px;
         color: black;
         padding: 0.5em;
@@ -98,7 +98,7 @@ $mobile-breakpoint: 900px;
     }
     .contact-btn{
         cursor: pointer;
-        color: white;
+        color: $offwhite;
         background-color: $gunmetal;
         border: none;
         font-family: $nunito;
@@ -107,7 +107,7 @@ $mobile-breakpoint: 900px;
         padding: 0.5em;
         margin: 1em 0em;
         border-radius: 10px;
-        border: 2px solid white;
+        border: 2px solid $offwhite;
         box-shadow: 1px 1px 10px black;
         width: 40%;
 

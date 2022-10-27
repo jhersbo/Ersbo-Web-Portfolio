@@ -9,7 +9,7 @@ $breakpoint-mobile: 900px;
     }
     
     #about-header-content{
-        background-color: white;
+        background-color: $offwhite;
         border-radius: 15px;
         box-shadow: 1px 1px 10px black;
         margin-right: 1em;
@@ -20,6 +20,7 @@ $breakpoint-mobile: 900px;
     .about-container{
         display: flex;
         color: black;
+        font-family: $nunito;
     }
     
     #name-title-about{
@@ -52,7 +53,7 @@ $breakpoint-mobile: 900px;
     }
 
     #about-header-content{
-        background-color: white;
+        background-color: $offwhite;
         padding: 0.25em;
         border-radius: 15px;
         box-shadow: 1px 1px 10px black;
@@ -60,14 +61,34 @@ $breakpoint-mobile: 900px;
 
     #about-image{
         height: auto;
-        width: 35%;
+        width: 40%;
         border-radius: 15px;
-        box-shadow: 1px 1px 5px black;
+        // box-shadow: 1px 1px 10px black;
     }
 
     #name-image{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0.1em 0.1em 0.1em 1em;
+        background-color: $gunmetal;
+        color: $offwhite;
+        box-shadow: inset 1px 1px 20px black;
+        border-radius: 15px;
+        font-family: $rubik;
+    }
+    
+    .descriptor{
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+    }
+
+    #content-about{
+        font-family: $rubik;
+    }
+
+    #content-about > p{
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
     }
 }

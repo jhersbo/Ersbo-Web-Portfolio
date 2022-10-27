@@ -10,7 +10,7 @@ interface AboutContentProps{
 }
 
 const AboutContent = ({ thinScreenBool }: AboutContentProps)=>{
-    const imgs = [`${process.env.PUBLIC_URL}/images/me&millie.jpg`]
+    const imgs = [`${process.env.PUBLIC_URL}/images/me&millie_resized.jpg`]
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(()=>{
@@ -26,13 +26,19 @@ const AboutContent = ({ thinScreenBool }: AboutContentProps)=>{
                     <div id='name-title-about'>
                         {
                             !thinScreenBool ?
-                            <h1>Jack Ersbo</h1>
+                            <div>
+                                <h1>Jack Ersbo</h1>
+                                <h3>Web Developer</h3>
+                            </div>
                             :
                             <div id='name-image'>
-                                <h1>Jack Ersbo</h1>
+                                <div>
+                                    <h2 className='descriptor'>Jack Ersbo</h2>
+                                    <h4 className='descriptor'>Web Developer</h4>
+                                </div>
                                 {
                                     !isLoading && thinScreenBool ?
-                                    <img src={process.env.PUBLIC_URL + '/images/me&millie.jpg'} id='about-image' alt='Jack Ersbo and his cat, Millie.'></img>
+                                    <img src={process.env.PUBLIC_URL + '/images/me&millie_resized.jpg'} id='about-image' alt='Jack Ersbo and his cat, Millie.'></img>
                                     :
                                     null
                                 }
@@ -45,13 +51,13 @@ const AboutContent = ({ thinScreenBool }: AboutContentProps)=>{
                         I am a motivated, curious, flexible individual with a passion for web development.
                     </p>
                     <p>
-                        I graduated from the ThriveDX (formerly HackerU) web development bootcamp as part of the University of Wisconsin College of Engineering in June 2022. Since then, I have been honing my skills and understanding of creating and maintaining larger applications with relational and non-relational (NoSQL) databases.
+                        I graduated from the ThriveDX web development bootcamp as part of the University of Wisconsin College of Engineering in June 2022. Since then, I have been honing my skills and understanding of creating and maintaining larger applications with relational and non-relational databases.
                     </p>
                     <p>
-                        I have experience and am proficient in <b>HTML, CSS, JavaScript/JSX/TypeScript, and Python</b> programming languages and experience with various libraries, such as <b>React, Redux, Express, MongoDB, Flask, and PostgreSQL/Sequelize ORM</b>.
+                        I have experience and am proficient in <b>HTML, CSS, JavaScript/JSX/TypeScript, and Python</b> programming languages and experience with various libraries, such as <b>React, Redux, Express, MongoDB, Flask, and PostgreSQL</b>.
                     </p>
                     <p>
-                        I have deployed applications using Heroku, Netlify, and AWS. I also have experience with Docker and Kubernetes.
+                        I have deployed applications using AWS, Netlify, Heroku, and GitHub Pages. I also have some independent experience with Docker and Kubernetes.
                     </p>
                 </div>
             </div>

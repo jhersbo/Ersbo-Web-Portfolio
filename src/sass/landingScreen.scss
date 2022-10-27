@@ -34,7 +34,7 @@ $breakpoint-mobile: 900px;
     #landing-name-div{
         min-width: 32vw;
         background-color: $orange;
-        font-family: $rubik;
+        font-family: $obitron;
         font-size: 42px;
         // box-shadow: inset -5px -5px 20px black;
     }
@@ -42,10 +42,14 @@ $breakpoint-mobile: 900px;
     #landing-role-div{
         min-width: 68vw;
         background-color: $gunmetal;
-        font-family: $rubik;
+        font-family: $obitron;
         font-size: 42px;
         font-weight: 300;
-        color: white;
+        color: $offwhite;
+    }
+
+    #landing-footer{
+        font-family: $patrick;
     }
 }
 
@@ -53,7 +57,7 @@ $breakpoint-mobile: 900px;
     #landing-name-div{
         min-width: 100%;
         background-color: $orange;
-        font-family: $rubik;
+        font-family: $obitron;
         font-size: 32px;
     }
 
@@ -64,23 +68,24 @@ $breakpoint-mobile: 900px;
 
     #landing-role-div{
         background-color: $gunmetal;
-        font-family: $rubik;
+        font-family: $obitron;
         text-align: right;
-        font-size: 32px;
+        font-size: 26px;
     }
 
     #landing-role{
         margin: auto;
-        color: white;
+        color: $offwhite;
         padding: 0.5em;
     }
 
     #landing-footer{
-        font-size: 14px;
+        font-size: 16px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-family: $patrick;
         margin: 1% 0% 0% 0%;
     } 
 }

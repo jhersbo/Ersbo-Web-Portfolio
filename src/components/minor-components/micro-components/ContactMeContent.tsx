@@ -11,14 +11,14 @@ interface ContactMeProps{
 const ContactMeContent = ({ thinScreenBool }: ContactMeProps)=>{
 
     const handleDownloadClick = ()=>{
-        fetch(`${process.env.PUBLIC_URL}/Portfolio-materials/Resume_mk2.pdf`)
+        fetch(`${process.env.PUBLIC_URL}/Portfolio-materials/Jack_Ersbo_Resume_10.24.2022.pdf`)
         .then(response => {
             response.blob()
             .then(blob => {
                 const fileURL = window.URL.createObjectURL(blob)
                 let alink = document.createElement('a')
                 alink.href = fileURL
-                alink.download = `Resume_mk2.pdf`
+                alink.download = `JackErsboResume.pdf`
                 alink.click()
             })
         })

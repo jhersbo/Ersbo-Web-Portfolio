@@ -52,7 +52,7 @@ const LandingScreen = ({ setPage, thinScreenBool }: LandingScreenProps)=>{
                 transition={{ type: "spring", stiffness: 100 }}>
                     <motion.h1 id="landing-role"
                     whileHover={{scale: 1.1,}}
-                    transition={{ type: "spring", stiffness: 400, damping: 8 }}>Full-Stack Software Developer</motion.h1>
+                    transition={{ type: "spring", stiffness: 400, damping: 8 }}>Full-Stack Web Developer</motion.h1>
                 </motion.div>
             </header>
             <motion.footer id="landing-footer" className="bottom-landing-panel"

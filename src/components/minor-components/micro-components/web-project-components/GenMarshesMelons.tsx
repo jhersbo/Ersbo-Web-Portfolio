@@ -88,7 +88,7 @@ const GenMarshesMelons = ({ thinScreenBool }: Props)=>{
     }
 
     const paragraphs = {
-        1: "This is a basic platforming game built with primarily vanilla JavaScript, jQuery and the Phaser.js game engine.",
+        1: "This is a basic platforming game built with primarily vanilla JavaScript, jQuery and the Phaser.js game engine. The objective is to collect the floating mellons in as little time as possible.",
         2: "The app is able to execute user authentication and to track users' scores.",
         3: ""
     }

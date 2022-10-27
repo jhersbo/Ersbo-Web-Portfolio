@@ -57,10 +57,10 @@ const ProjectsContent = ({ thinScreenBool }: ProjectsProps)=>{
                 whileHover={{scale: 1.1}}
                 whileTap={{scale: 0.9}}
                 >
-                    <h2>{element.title}</h2>
-                    <h4>{element.projectStack}</h4>
+                    <h2 className='project-thumbnail-child'>{element.title}</h2>
+                    <h4 className='project-thumbnail-child'>{element.projectStack}</h4>
                     <hr id='thumbnail-hr'/>
-                    <p className='project-thumbnail-description'>{element.projectDescription}</p>
+                    <p className='project-thumbnail-child'>{element.projectDescription}</p>
                 </motion.div>
             )
         })
