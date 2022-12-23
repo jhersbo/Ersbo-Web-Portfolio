@@ -11,7 +11,7 @@ interface ContactMeProps{
 const ContactMeContent = ({ thinScreenBool }: ContactMeProps)=>{
 
     const handleDownloadClick = ()=>{
-        fetch(`${process.env.PUBLIC_URL}/Portfolio-materials/Jack_Ersbo_Resume_10.24.2022.pdf`)
+        fetch(`${process.env.PUBLIC_URL}/Portfolio-materials/Jack_Ersbo_Resume_12.13.2022.pdf`)
         .then(response => {
             response.blob()
             .then(blob => {
